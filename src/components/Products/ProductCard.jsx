@@ -46,6 +46,9 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
+  productNew: PropTypes.bool.isRequired,
+  percentDiscount: PropTypes.string.isRequired,
+  sale: PropTypes.bool.isRequired,
 };
 
 export default ProductCard;
