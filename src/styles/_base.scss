@@ -70,11 +70,11 @@ img {
 .container {
   width: 100%;
   max-width: 1620px;
-  padding: 0 50px;
+  padding: 0 150px;
   margin: 0 auto;
 
   @include tablet {
-    padding: 0 1\20px;
+    padding: 0 20px;
   }
 
   @include mobile {

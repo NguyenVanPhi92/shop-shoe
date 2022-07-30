@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Grid from './Grid';
-import logo from 'assets/images/Logo-2.png';
+import Grid from '../shared/GirdTemplate/Components/Grid';
+import logo from 'shared/assets/images/Logo-2.png';
 
 const footerAboutLinks = [
   {
@@ -40,11 +40,67 @@ const footerCustomerLinks = [
     path: '/about',
   },
 ];
+
+const footerContact = [
+  {
+    display: 'Tầng 2 , tòa nhà HCMCC. 249A Thụy Khuê, Tây Hồ, Hà Nội',
+    path: '/about',
+  },
+  {
+    display: 'Tầng 2 , tòa nhà HCMCC. 249A Thụy Khuê, Tây Hồ, Hà Nội',
+    path: '/about',
+  },
+  {
+    display: 'Tầng 2 , tòa nhà HCMCC. 249A Thụy Khuê, Tây Hồ, Hà Nội',
+    path: '/about',
+  },
+  {
+    display: 'support@sapo.vn',
+    path: '/about',
+  },
+];
+
+const footerSocial = [
+  {
+    title: 'Facebook',
+    display: "<i class='bx bxl-facebook'></i>",
+    path: '/about',
+  },
+  {
+    title: 'Youtube',
+    display: "<i class='bx bxl-youtube' ></i>",
+    path: '/about',
+  },
+  {
+    title: 'Twitter',
+    display: "<i class='bx bxl-twitter' ></i>",
+    path: '/about',
+  },
+  {
+    title: 'Instagram',
+    display: "<i class='bx bxl-instagram'></i>",
+    path: '/about',
+  },
+];
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <Grid col={4} mdCol={2} smCol={1} gap={10}>
+        <div className="social">
+          {footerSocial.map((item, index) => (
+            <Link to={item.path} key={index}>
+              <div className="social__item">
+                <div className="social__item__title">{item.title}</div>
+                <div
+                  className="social__item__icon"
+                  dangerouslySetInnerHTML={{ __html: item.display }}
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <Grid col={5} mdCol={2} smCol={1} gap={25}>
           <div>
             <div className="footer__title">Tổng đài hỗ trợ</div>
             <div className="footer__content">
@@ -53,6 +109,9 @@ const Footer = () => {
               </p>
               <p>
                 Thắc mắc đơn hàng <strong>0123456789</strong>
+              </p>
+              <p>
+                Góp ý, khiếu nại <strong>0123456789</strong>
               </p>
               <p>
                 Góp ý, khiếu nại <strong>0123456789</strong>
@@ -73,6 +132,16 @@ const Footer = () => {
             <div className="footer__title">Chăm sóc khách hàng</div>
             <div className="footer__content">
               {footerCustomerLinks.map((item, index) => (
+                <p key={index}>
+                  <Link to={item.path}>{item.display}</Link>
+                </p>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="footer__title">Thông tin liên hệ</div>
+            <div className="footer__content">
+              {footerContact.map((item, index) => (
                 <p key={index}>
                   <Link to={item.path}>{item.display}</Link>
                 </p>

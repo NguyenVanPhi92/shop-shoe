@@ -1,12 +1,16 @@
 import Button from 'components/Button';
 import PropTypes from 'prop-types';
-import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { set } from 'redux/product-modal/productModalSlice';
 import numberWithCommas from 'utils/NumberWithCommas';
 const ProductCard = (props) => {
-  const { slug, img01, img02, name, salePrice, price, percentDiscount } = props;
-  console.log('salePrice ', salePrice);
+  const { slug, img01, img02, name, productNew, sale, price, percentDiscount } = props;
+  const dispatch = useDispatch();
+
+  console.log('sale ', sale);
   console.log(name);
+
   return (
     <div className="product-card">
       <Link to={`/catalog/${slug}`}>
@@ -14,7 +18,8 @@ const ProductCard = (props) => {
           <img src={img01} alt="" />
           <img src={img02} alt="" />
 
-          {salePrice && <div className="sale-percent">{numberWithCommas(percentDiscount)}%</div>}
+          {sale && <div className="sale-percent">{numberWithCommas(percentDiscount)}%</div>}
+          {productNew && <div className="product-new">new</div>}
         </div>
 
         <h3 className="product-card__name">{name}</h3>
@@ -27,7 +32,7 @@ const ProductCard = (props) => {
       </Link>
 
       <div className="product-card__btn">
-        <Button size="sm" icon="bx bx-cart" animate={true}>
+        <Button size="sm" icon="bx bx-cart" animate={true} onClick={() => dispatch(set(slug))}>
           Chọn mua
         </Button>
       </div>

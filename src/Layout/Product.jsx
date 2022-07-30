@@ -1,5 +1,5 @@
-import productData from 'assets/fake-data/products';
-import Grid from 'components/Grid';
+import productData from 'shared/assets/fake-data/products';
+import Grid from 'shared/GirdTemplate/Components/Grid';
 import Helmet from 'components/Helmet';
 import ProductCard from 'components/Products/ProductCard';
 import ProductView from 'components/Products/ProductView';
@@ -38,7 +38,7 @@ const Product = (props) => {
                 name={item.title}
                 price={Number(item.price)}
                 slug={item.slug}
-                salePrice={item.salePrice}
+                sale={item.sale}
               />
             ))}
           </Grid>

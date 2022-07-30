@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
-import Grid from './Grid';
+import Grid from '../shared/GirdTemplate/Components/Grid';
 import ProductCard from './Products/ProductCard';
 
 const InfinityList = (props) => {
@@ -60,6 +60,8 @@ const InfinityList = (props) => {
             name={item.title}
             price={Number(item.price)}
             slug={item.slug}
+            sale={item.sale}
+            percentDiscount={item.percentDiscount}
           />
         ))}
       </Grid>

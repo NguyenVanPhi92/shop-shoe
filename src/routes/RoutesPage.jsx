@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
-import Product from '../pages/Product';
-import Catalog from '../pages/Catalog';
-import Cart from '../pages/Cart';
-import Male from 'pages/Male';
-import Female from 'pages/Female';
-import Contact from 'pages/Contact';
-import News from 'pages/News';
+import Home from '../Layout/Home';
+import Product from '../Layout/Product';
+import Catalog from '../Layout/Catalog';
+import Cart from '../Layout/Cart';
+import Male from 'Layout/Male';
+import Female from 'Layout/Female';
+import Contact from 'Layout/Contact';
+import News from 'Layout/News';
 import Slider from 'components/Slider';
 
 const RoutesPage = () => {

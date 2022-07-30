@@ -3,6 +3,24 @@
   box-shadow: $box-shadow;
   font-size: 1.1rem;
 
+  .social {
+    @include flex(center, space-evenly);
+    margin-bottom: 30px;
+
+    &__item {
+      @include flex(center, space-between);
+      font-size: 1.4rem;
+
+      &__title {
+        margin-right: 8px;
+      }
+
+      &__icon {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
   &__logo {
     height: 38px;
   }

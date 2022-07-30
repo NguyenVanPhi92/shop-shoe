@@ -35,6 +35,20 @@
       color: $btn-main-color;
       outline: none;
       border: none;
+      border-radius: 3px;
+    }
+
+    .product-new {
+      position: absolute;
+      top: 0;
+      right: 22px;
+      padding: 5px 10px;
+      background-color: $product-new-color;
+      color: $btn-main-color;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      transform: rotate(45deg);
     }
 
     &:hover img {
@@ -70,6 +84,8 @@
   }
 
   &__btn {
+    margin-bottom: 15px;
+
     @include tablet {
       display: none;
     }

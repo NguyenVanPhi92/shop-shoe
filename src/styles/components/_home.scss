@@ -1,0 +1,39 @@
+.section {
+  &__body {
+    .product-hot {
+      .product-card {
+        &:hover {
+          box-shadow: 1px 1px 20px 1px #eeeeee;
+          -webkit-box-shadow: 1px 1px 20px 1px #eeeeee;
+          -moz-box-shadow: 1px 1px 20px 1px #eeeeee;
+        }
+
+        &__image {
+          img {
+            padding-top: 15px;
+            width: 80%;
+            object-fit: cover;
+          }
+
+          .sale-percent {
+            top: 15px;
+            left: 8px;
+
+            @include mobile {
+              left: 26px;
+            }
+          }
+
+          .product-new {
+            top: 12px;
+            right: 6px;
+
+            @include mobile {
+              right: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

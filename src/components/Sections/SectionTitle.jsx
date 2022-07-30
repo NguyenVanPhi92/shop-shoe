@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SectionTitle = (props) => {
   return (
     <div className="section__title">
       <div>{props.title}</div>
-      <button>Xem tất cả</button>
+      <Link to="/catalog">
+        <button>Xem tất cả</button>
+      </Link>
     </div>
   );
 };
