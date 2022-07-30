@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Layout from './components/Layout';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './assets/boxicons-2.0.7/css/boxicons.min.css';
-import './sass/index.scss';
+import './shared/assets/boxicons-2.0.7/css/boxicons.min.css';
+import './styles/index.scss';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from 'redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );
 

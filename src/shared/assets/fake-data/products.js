@@ -43,7 +43,7 @@ const products = [
     image02: product_01_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
     colors: ['white', 'red', 'orange'],
     slug: 'ao-thun-dinosaur-01',
     size: ['s', 'm', 'l', 'xl'],
@@ -57,7 +57,8 @@ const products = [
     image02: product_02_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
+    productNew: true,
     colors: ['white', 'red', 'blue'],
     slug: 'ao-thun-dinosaur-02',
     size: ['s', 'm'],
@@ -71,7 +72,8 @@ const products = [
     image02: product_03_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
+    productNew: true,
     colors: ['white', 'red', 'orange', 'yellow'],
     slug: 'ao-thun-dinosaur-03',
     size: ['m'],
@@ -85,7 +87,8 @@ const products = [
     image02: product_04_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
+    productNew: true,
     colors: ['white', 'orange', 'blue'],
     slug: 'ao-thun-polo-04',
     size: ['xl'],
@@ -99,7 +102,7 @@ const products = [
     image02: product_05_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
     colors: ['white', 'pink'],
     slug: 'ao-thun-polo-05',
     size: ['xxl'],
@@ -113,7 +116,7 @@ const products = [
     image02: product_06_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
     colors: ['black'],
     slug: 'ao-thun-polo-06',
     size: ['s', 'm', 'xl'],
@@ -127,7 +130,7 @@ const products = [
     image02: product_07_image_02,
     categorySlug: 'ao-somi',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
     colors: ['white', 'red', 'orange', 'blue'],
     slug: 'ao-somi-caro-07',
     size: ['l', 'xl'],
@@ -141,7 +144,8 @@ const products = [
     image02: product_08_image_02,
     categorySlug: 'ao-somi',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
+    productNew: true,
     colors: ['white', 'red', 'black'],
     slug: 'ao-somi-dai-tay-08',
     size: ['s', 'm', 'xl'],
@@ -155,7 +159,7 @@ const products = [
     image02: product_09_image_02,
     categorySlug: 'ao-somi',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
     colors: ['white', 'blue'],
     slug: 'ao-somi-tay-dai-09',
     size: ['m'],
@@ -169,7 +173,8 @@ const products = [
     image02: product_10_image_02,
     categorySlug: 'quan-jean',
     percentDiscount: '0',
-    salePrice: false,
+    sale: false,
+    productNew: true,
     colors: ['blue', 'black'],
     slug: 'quan-jean-phong-cach-10',
     size: ['l'],
@@ -183,7 +188,7 @@ const products = [
     image02: product_11_image_02,
     categorySlug: 'quan-jean',
     percentDiscount: '10',
-    salePrice: true,
+    sale: true,
     colors: ['blue', 'black'],
     slug: 'quan-jean-11',
     size: ['s', 'm', 'xl'],
@@ -197,7 +202,7 @@ const products = [
     image02: product_12_image_02,
     categorySlug: 'quan-jean',
     percentDiscount: '20',
-    salePrice: true,
+    sale: true,
     colors: ['blue'],
     slug: 'quan-jean-12',
     size: ['s', 'm', 'xl'],
@@ -211,7 +216,8 @@ const products = [
     image02: product_01_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '8',
-    salePrice: true,
+    sale: true,
+    productNew: true,
     colors: ['white', 'red'],
     slug: 'ao-thun-dinosaur-13',
     size: ['s', 'm', 'xl'],
@@ -225,7 +231,8 @@ const products = [
     image02: product_02_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '25',
-    salePrice: true,
+    sale: true,
+    productNew: true,
     colors: ['white', 'blue'],
     slug: 'ao-thun-dinosaur-14',
     size: ['s', 'm'],
@@ -239,7 +246,7 @@ const products = [
     image02: product_03_image_02,
     categorySlug: 'ao-thun',
     percentDiscount: '14',
-    salePrice: true,
+    sale: true,
     colors: ['red', 'blue'],
     slug: 'ao-thun-dinosaur-15',
     size: ['xl'],
@@ -253,7 +260,8 @@ const products = [
     image02: product_08_image_02,
     categorySlug: 'ao-somi',
     percentDiscount: '17',
-    salePrice: true,
+    sale: true,
+    productNew: true,
     colors: ['blue', 'black'],
     slug: 'ao-somi-dai-tay-16',
     size: ['m', 'xl'],
@@ -267,7 +275,7 @@ const products = [
     image02: product_09_image_02,
     categorySlug: 'ao-somi',
     percentDiscount: '23',
-    salePrice: true,
+    sale: true,
     colors: ['white', 'blue'],
     slug: 'ao-somi-tay-dai-17',
     size: ['s', 'l', 'xl'],
@@ -281,7 +289,8 @@ const products = [
     image02: product_10_image_02,
     categorySlug: 'quan-jean',
     percentDiscount: '16',
-    salePrice: true,
+    sale: true,
+    productNew: true,
     colors: ['blue', 'black'],
     slug: 'quan-jean-phong-cach-18',
     size: ['s', 'm', 'l', 'xl'],
@@ -303,6 +312,20 @@ const getProducts = (count) => {
 
 // lấy ra sản phẩm theo Slug
 const getProductBySlug = (slug) => products.find((e) => e.slug === slug);
+
+const getCartItemDetail = (cartItems) => {
+  let res = [];
+  if (cartItems.length > 0) {
+    cartItems.forEach((e) => {
+      res.push({
+        ...e,
+        product: getProductBySlug(e.slug),
+      });
+    });
+  }
+
+  return res;
+};
 
 // lấy ra sản phẩm theo tên
 const getCartItemsInfo = (cartItems) => {
@@ -327,6 +350,7 @@ const productData = {
   getProducts,
   getProductBySlug,
   getCartItemsInfo,
+  getCartItemDetail,
 };
 
 export default productData;

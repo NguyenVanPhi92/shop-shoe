@@ -1,0 +1,98 @@
+.grid-areas {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 200px;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-areas:
+    'banner banner product1 product2 product3 product4 product5'
+    'banner banner product6 product7 product8 product9 product10';
+
+  @include tablet {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      'banner product1 product2 product3 product4'
+      'banner product5 product6 product7 product8';
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'banner product1 product2 '
+      'banner product3 product4';
+  }
+
+  &__banner {
+    grid-area: banner;
+    height: 100%;
+
+    &__image {
+      height: 550px;
+      width: 100%;
+
+      @include tablet {
+        height: 450px;
+      }
+    }
+  }
+
+  .products {
+    .product-card {
+      margin-bottom: 0;
+
+      &__image {
+        margin-bottom: 10px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        pointer-events: none; // loại bỏ thuộc tính rê chuột
+
+        img {
+          position: unset;
+          width: 130px;
+          height: 150px;
+          object-fit: cover;
+          transform: translateX(0%);
+
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        .sale-percent {
+          top: 0;
+          left: 4px;
+          padding: 3px 7px;
+        }
+
+        .product-new {
+          top: 0;
+          right: -1px;
+          font-size: 0.8rem;
+          padding: 3px 7px;
+        }
+      }
+
+      &__name {
+        margin-bottom: 3px;
+        font-size: 1rem;
+      }
+
+      &__price {
+        margin-bottom: 3px;
+        font-size: 1.2rem;
+      }
+
+      &__btn {
+        .btn__txt {
+          padding: 0.5rem 1rem;
+          font-size: 0.7rem;
+        }
+
+        .btn__icon {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

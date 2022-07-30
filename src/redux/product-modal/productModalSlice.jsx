@@ -4,4 +4,19 @@ const initialState = {
   value: null,
 };
 
-export const productModalSlice = createSlice({});
+export const productModalSlice = createSlice({
+  initialState,
+  name: 'productModalSlice',
+  reducers: {
+    set: (state, action) => {
+      state.value = action.payload;
+    },
+
+    remove: (state) => {
+      state.value = null;
+    },
+  },
+});
+
+export const { set, remove } = productModalSlice.actions;
+export default productModalSlice.reducer;

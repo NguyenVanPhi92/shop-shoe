@@ -1,4 +1,4 @@
-import logo from 'assets/images/Logo-2.png';
+import logo from 'shared/assets/images/Logo-2.png';
 import { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 const mainNav = [
@@ -73,7 +73,7 @@ const Header = () => {
       window.removeEventListener('scroll', scrollHeader);
     };
   }, []);
-  const product_01_image_01 = require('assets/images/products/product-01 (1).jpg');
+  const product_01_image_01 = require('shared/assets/images/products/product-01 (1).jpg');
   const menuLeft = useRef(null);
   const menuToggle = () => menuLeft.current.classList.toggle('active');
 
@@ -144,6 +144,10 @@ const Header = () => {
               <Link to="/cart">
                 <i className="bx bx-shopping-bag"></i>
               </Link>
+
+              <div className="badge">
+                <span>5</span>
+              </div>
             </div>
             <div className="header__menu__item header__menu__right__item">
               <i className="bx bx-user"></i>

@@ -4,20 +4,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import productData from 'assets/fake-data/products';
+import productData from 'shared/assets/fake-data/products';
 import { Autoplay, Pagination } from 'swiper';
 import ProductCard from './Products/ProductCard';
 
 const Slider = () => {
   const relatedProducts = productData.getProducts(12);
-  console.log('hih ', relatedProducts[1].salePrice);
+  console.log('hih ', relatedProducts[1].sale);
   return (
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
+        // spaceBetween={10}
         autoplay={{
-          delay: 500,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -25,8 +25,12 @@ const Slider = () => {
           clickable: true,
         }}
         breakpoints={{
-          640: {
+          380: {
             slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           768: {
@@ -49,7 +53,7 @@ const Slider = () => {
               name={item.title}
               price={Number(item.price)}
               slug={item.slug}
-              salePrice={item.salePrice}
+              sale={item.sale}
               percentDiscount={item.percentDiscount}
             />
           </SwiperSlide>

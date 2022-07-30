@@ -1,17 +1,29 @@
 import Button from 'components/Button';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from 'redux/shopping-cart/cartItemsSlice';
 import numberWithCommas from 'utils/NumberWithCommas';
 
 const ProductView = (props) => {
-  const { product } = props;
+  let { product } = props;
+
+  const dispatch = useDispatch();
+
+  if (product === undefined) {
+    product = {
+      price: 0,
+      title: '',
+      colors: [],
+      size: [],
+    };
+  }
+
   const [previewImg, setPreviewImg] = useState(product.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
   const [color, setColor] = useState(undefined);
   const [size, setSize] = useState(undefined);
   const [quantity, setQuantity] = useState(1);
-  let navigate = useNavigate();
 
   // handle
   const updateQuantity = (type) => {
@@ -49,12 +61,33 @@ const ProductView = (props) => {
   const addToCart = () => {
     if (check()) {
       console.log({ color, size, quantity });
+      dispatch(
+        addItem({
+          slug: product.slug,
+          color: color,
+          size: size,
+          quantity: quantity,
+          price: product.price,
+        }),
+      );
     }
   };
 
   // go to card
   const gotoCart = () => {
-    if (check()) navigate('/cart');
+    if (check()) {
+      dispatch(
+        addItem({
+          slug: product.slug,
+          color: color,
+          size: size,
+          quantity: quantity,
+          price: product.price,
+        }),
+      );
+
+      alert('success');
+    }
   };
 
   return (
@@ -175,7 +208,7 @@ const ProductView = (props) => {
 };
 
 ProductView.propTypes = {
-  product: PropTypes.object.isRequired,
+  product: PropTypes.object,
 };
 
 export default ProductView;

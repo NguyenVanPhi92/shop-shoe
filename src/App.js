@@ -1,7 +1,7 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import RoutesPage from 'routes/RoutesPage';
-import ProductViewModal from './Products/ProductViewModal';
+import ProductViewModal from './components/Products/ProductViewModal';
 
 const Layout = () => {
   return (
@@ -14,7 +14,7 @@ const Layout = () => {
       </div>
       <Footer />
 
-      {/* <ProductViewModal /> */}
+      <ProductViewModal />
     </div>
   );
 };
