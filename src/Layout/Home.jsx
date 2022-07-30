@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'components/Slider';
 import GridAreas from 'shared/GirdTemplate/Components/GridAreas';
 import { sale } from 'shared/assets/images';
+import NewsCard from 'components/News/NewCard';
 
 const Home = () => {
   return (
@@ -39,14 +40,18 @@ const Home = () => {
 
       {/* Slider section */}
       <Section>
-        <SectionTitle title="Sản phẩm hot 2023" />
+        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Sản phẩm hot 2023" />
         <Slider />
       </Section>
       {/*End Slider section */}
 
       {/*best selling section */}
       <Section>
-        <SectionTitle title="Top sản phẩm bán chạy "></SectionTitle>
+        <SectionTitle
+          btnContent="Xem tất cả"
+          slug="/catalog"
+          title="Top sản phẩm bán chạy "
+        ></SectionTitle>
         <SectionBody>
           <GridAreas>
             <div className="grid-areas__banner" style={{ backgroundColor: 'red' }}></div>
@@ -72,7 +77,11 @@ const Home = () => {
 
       {/*new arrival section */}
       <Section>
-        <SectionTitle title="Lễ Hội Siêu Sale"></SectionTitle>
+        <SectionTitle
+          btnContent="Xem tất cả"
+          slug="/catalog"
+          title="Lễ Hội Siêu Sale"
+        ></SectionTitle>
         <SectionBody>
           <GridAreas>
             <div className="grid-areas__banner">
@@ -110,7 +119,7 @@ const Home = () => {
 
       {/*popular product section */}
       <Section>
-        <SectionTitle title="Gía siêu HOT"></SectionTitle>
+        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Gía siêu HOT"></SectionTitle>
         <SectionBody>
           <div className="product-hot">
             <Grid col={5} mdCol={2} smCol={1}>
@@ -132,6 +141,20 @@ const Home = () => {
         </SectionBody>
       </Section>
       {/*end popular product section */}
+
+      {/* news fashion section */}
+      <Section>
+        <SectionTitle btnContent="Xem tất cả" slug="/news" title="GÓC TIN TỨC" />
+        <SectionBody>
+          <Grid col={4} mdCol={3} smCol={2} gap={10}>
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+          </Grid>
+        </SectionBody>
+      </Section>
+      {/*end news fashion section */}
     </Helmet>
   );
 };

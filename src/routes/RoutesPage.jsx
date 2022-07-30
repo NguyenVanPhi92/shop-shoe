@@ -8,7 +8,7 @@ import Male from 'Layout/Male';
 import Female from 'Layout/Female';
 import Contact from 'Layout/Contact';
 import News from 'Layout/News';
-import Slider from 'components/Slider';
+import Pay from 'Layout/Pay';
 
 const RoutesPage = () => {
   return (
@@ -17,10 +17,11 @@ const RoutesPage = () => {
       <Route path="/catalog" element={<Catalog />} />
       <Route path="/catalog/:id" element={<Product />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/news" element={<Slider />} />
+      <Route path="/news" element={<News />} />
       <Route path="/male" element={<Male />} />
       <Route path="/female" element={<Female />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/pay" element={<Pay />} />
     </Routes>
   );
 };

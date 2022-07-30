@@ -36,7 +36,9 @@ const Cart = () => {
           </div>
 
           <div className="cart__info__btn">
-            <Button size="block">Đặt hàng</Button>
+            <Button size="block">
+              <Link to="/pay">Đặt hàng</Link>
+            </Button>
             <Link to="/catalog">
               <Button size="block">tiếp tục mua hàng</Button>
             </Link>
