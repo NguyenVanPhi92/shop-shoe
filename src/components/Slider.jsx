@@ -48,6 +48,7 @@ const Slider = () => {
         {relatedProducts.map((item, index) => (
           <SwiperSlide key={index}>
             <ProductCard
+              key={index}
               img01={item.image01}
               img02={item.image02}
               name={item.title}
@@ -55,6 +56,7 @@ const Slider = () => {
               slug={item.slug}
               sale={item.sale}
               percentDiscount={item.percentDiscount}
+              productNew={item.productNew}
             />
           </SwiperSlide>
         ))}

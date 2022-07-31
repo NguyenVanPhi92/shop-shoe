@@ -39,6 +39,8 @@ const Product = (props) => {
                 price={Number(item.price)}
                 slug={item.slug}
                 sale={item.sale}
+                productNew={item.productNew}
+                percentDiscount={item.percentDiscount}
               />
             ))}
           </Grid>

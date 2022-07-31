@@ -10,6 +10,7 @@ const ProductCard = (props) => {
 
   console.log('sale ', sale);
   console.log(name);
+  console.log(productNew);
 
   return (
     <div className="product-card">
