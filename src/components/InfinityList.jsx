@@ -62,6 +62,7 @@ const InfinityList = (props) => {
             slug={item.slug}
             sale={item.sale}
             percentDiscount={item.percentDiscount}
+            productNew={item.productNew}
           />
         ))}
       </Grid>

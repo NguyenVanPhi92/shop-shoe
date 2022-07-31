@@ -1,7 +1,7 @@
 .product-view__modal {
   position: fixed;
   z-index: 101;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -21,7 +21,7 @@
     margin: auto;
     padding: 2rem;
     background-color: $main-bg;
-    width: 80%;
+    width: 43%;
     position: relative;
     opacity: 0;
     transform: translateY(-250px);
@@ -31,30 +31,63 @@
       .product {
         // flex-direction: column;
         &__images {
+          justify-content: space-between;
+
           &__main {
-            padding-top: 70%;
+            padding-top: 0;
+
+            img {
+              height: 250px;
+            }
+          }
+        }
+
+        &-description {
+          &__title {
+            margin: 0.7rem 0;
+          }
+
+          &__content {
+            font-size: 0.9rem;
           }
         }
 
         &__info {
           top: 0;
           padding-top: 0;
-          position: relative;
+          position: sticky;
 
           &__title {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
 
           &__item {
+            margin-top: 8px;
+
             &__list {
               &__item {
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
 
                 .circle {
-                  width: 27px;
-                  height: 27px;
+                  width: 22px;
+                  height: 22px;
                 }
+
+                &__size {
+                  font-size: 1.2rem;
+                }
+              }
+            }
+
+            &__price {
+              font-size: 1.6rem;
+            }
+
+            .btn {
+              &__txt {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
               }
             }
           }
@@ -66,6 +99,13 @@
       position: absolute;
       right: 0;
       top: 0;
+
+      .btn {
+        &__txt {
+          padding: 0.4rem 0.7rem;
+          font-size: 0.7rem;
+        }
+      }
     }
   }
 

@@ -1,14 +1,18 @@
 import Button from 'components/Button';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { remove } from 'redux/product-modal/productModalSlice';
 import { addItem } from 'redux/shopping-cart/cartItemsSlice';
 import numberWithCommas from 'utils/NumberWithCommas';
 
 const ProductView = (props) => {
   let { product } = props;
 
+  const productSlug = useSelector((state) => state.productModal.value);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   if (product === undefined) {
     product = {
@@ -57,24 +61,15 @@ const ProductView = (props) => {
     return true;
   };
 
-  // add to cart
-  const addToCart = () => {
-    if (check()) {
-      console.log({ color, size, quantity });
-      dispatch(
-        addItem({
-          slug: product.slug,
-          color: color,
-          size: size,
-          quantity: quantity,
-          price: product.price,
-        }),
-      );
-    }
-  };
-
   // go to card
   const gotoCart = () => {
+    navigate('/cart');
+    dispatch(remove());
+  };
+
+  // add to cart
+
+  const addToCart = () => {
     if (check()) {
       dispatch(
         addItem({

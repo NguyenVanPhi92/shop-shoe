@@ -1,21 +1,19 @@
-import heroSliderData from 'shared/assets/fake-data/hero-slider';
-import policy from 'shared/assets/fake-data/policy';
-import productData from 'shared/assets/fake-data/products';
-import Grid from 'shared/GirdTemplate/Components/Grid';
 import Helmet from 'components/Helmet';
 import HeroSlider from 'components/Hero/HeroSlider';
+import NewsCard from 'components/News/NewCard';
 import PolicyCart from 'components/Policy/PolicyCart';
 import ProductCard from 'components/Products/ProductCard';
 import Section from 'components/Sections/Section';
 import SectionBody from 'components/Sections/SectionBody';
 import SectionTitle from 'components/Sections/SectionTitle';
-import banner from 'shared/assets/images/banner.png';
-import React from 'react';
-import { Link } from 'react-router-dom';
 import Slider from 'components/Slider';
-import GridAreas from 'shared/GirdTemplate/Components/GridAreas';
+import { Link } from 'react-router-dom';
+import heroSliderData from 'shared/assets/fake-data/hero-slider';
+import policy from 'shared/assets/fake-data/policy';
+import productData from 'shared/assets/fake-data/products';
 import { sale } from 'shared/assets/images';
-import NewsCard from 'components/News/NewCard';
+import Grid from 'shared/GirdTemplate/Components/Grid';
+import GridAreas from 'shared/GirdTemplate/Components/GridAreas';
 
 const Home = () => {
   return (
@@ -47,11 +45,7 @@ const Home = () => {
 
       {/*best selling section */}
       <Section>
-        <SectionTitle
-          btnContent="Xem tất cả"
-          slug="/catalog"
-          title="Top sản phẩm bán chạy "
-        ></SectionTitle>
+        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Top sản phẩm bán chạy " />
         <SectionBody>
           <GridAreas>
             <div className="grid-areas__banner" style={{ backgroundColor: 'red' }}></div>
@@ -77,11 +71,7 @@ const Home = () => {
 
       {/*new arrival section */}
       <Section>
-        <SectionTitle
-          btnContent="Xem tất cả"
-          slug="/catalog"
-          title="Lễ Hội Siêu Sale"
-        ></SectionTitle>
+        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Lễ Hội Siêu Sale" />
         <SectionBody>
           <GridAreas>
             <div className="grid-areas__banner">
@@ -119,7 +109,7 @@ const Home = () => {
 
       {/*popular product section */}
       <Section>
-        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Gía siêu HOT"></SectionTitle>
+        <SectionTitle btnContent="Xem tất cả" slug="/catalog" title="Gía siêu HOT" />
         <SectionBody>
           <div className="product-hot">
             <Grid col={5} mdCol={2} smCol={1}>
