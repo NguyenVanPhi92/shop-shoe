@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeItem, updateItem } from 'redux/shopping-cart/cartItemsSlice';
-import numberWithCommas from 'utils/NumberWithCommas';
+import { formatPrice } from 'utils/formatPrice';
 
 const CartItems = (props) => {
   const dispatch = useDispatch();
@@ -43,9 +43,7 @@ const CartItems = (props) => {
           </Link>
         </div>
 
-        <div className="cart__item__info__price">
-          {numberWithCommas(Number(item.product.price))}
-        </div>
+        <div className="cart__item__info__price">{formatPrice(Number(item.product.price))}</div>
 
         <div className="cart__item__info__quantity">
           <div className="product__info__item__quantity">

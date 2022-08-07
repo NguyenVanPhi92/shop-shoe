@@ -1,6 +1,7 @@
-import logo from 'shared/assets/images/Logo-2.png';
 import { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { logo } from 'shared/assets/images';
+
 const mainNav = [
   {
     display: 'Trang chủ',

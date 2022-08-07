@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
-import Grid from '../shared/GirdTemplate/Components/Grid';
+import Grid from '../../shared/grid/Components/Grid';
 import ProductCard from './Products/ProductCard';
 
 const InfinityList = (props) => {

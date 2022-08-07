@@ -4,13 +4,12 @@
 
   &__new {
     position: absolute;
-    top: -6px;
-    right: -11px;
+    top: -3px;
+    right: -6px;
     padding: 2px 6px;
     box-sizing: border-box;
     background-color: $product-new-color;
     color: $btn-main-color;
     border-radius: 3px;
-    transform: rotate(45deg);
   }
 }

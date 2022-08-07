@@ -1,19 +1,19 @@
-import Helmet from 'components/Helmet';
-import HeroSlider from 'components/Hero/HeroSlider';
-import NewsCard from 'components/News/NewCard';
-import PolicyCart from 'components/Policy/PolicyCart';
-import ProductCard from 'components/Products/ProductCard';
-import Section from 'components/Sections/Section';
-import SectionBody from 'components/Sections/SectionBody';
-import SectionTitle from 'components/Sections/SectionTitle';
-import Slider from 'components/Slider';
+import Helmet from 'Client/components/Helmet';
+import HeroSlider from 'Client/components/Hero/HeroSlider';
+import NewsCard from 'Client/components/News/NewCard';
+import PolicyCart from 'Client/components/Policy/PolicyCart';
+import ProductCard from 'Client/components/Products/ProductCard';
+import Section from 'Client/components/Sections/Section';
+import SectionBody from 'Client/components/Sections/SectionBody';
+import SectionTitle from 'Client/components/Sections/SectionTitle';
+import Slider from 'Client/components/Slider';
 import { Link } from 'react-router-dom';
 import heroSliderData from 'shared/assets/fake-data/hero-slider';
 import policy from 'shared/assets/fake-data/policy';
 import productData from 'shared/assets/fake-data/products';
 import { sale } from 'shared/assets/images';
-import Grid from 'shared/GirdTemplate/Components/Grid';
-import GridAreas from 'shared/GirdTemplate/Components/GridAreas';
+import Grid from 'shared/grid/Components/Grid';
+import GridAreas from 'shared/grid/Components/GridAreas';
 
 const Home = () => {
   return (

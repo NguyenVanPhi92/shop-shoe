@@ -1,19 +1,21 @@
-import Button from 'components/Button';
+import Button from 'Client/components/Button';
+import Dropdown from 'Client/components/Dropdown/Dropdown';
+import productTutorial from 'Client/components/Dropdown/tutorialByproduct';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { remove } from 'redux/product-modal/productModalSlice';
 import { addItem } from 'redux/shopping-cart/cartItemsSlice';
-import numberWithCommas from 'utils/NumberWithCommas';
+import { policy_icon1, policy_icon2, policy_icon3, policy_icon4 } from 'shared/assets/images';
+import { formatPrice } from 'utils/formatPrice';
 
 const ProductView = (props) => {
   let { product } = props;
 
-  const productSlug = useSelector((state) => state.productModal.value);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  // set lại product
   if (product === undefined) {
     product = {
       price: 0,
@@ -22,12 +24,19 @@ const ProductView = (props) => {
       size: [],
     };
   }
-
   const [previewImg, setPreviewImg] = useState(product.image01);
   const [descriptionExpand, setDescriptionExpand] = useState(false);
   const [color, setColor] = useState(undefined);
   const [size, setSize] = useState(undefined);
   const [quantity, setQuantity] = useState(1);
+
+  // set reload product before buy
+  useEffect(() => {
+    setPreviewImg(product.image01);
+    setQuantity(1);
+    setColor(undefined);
+    setSize(undefined);
+  }, [product]);
 
   // handle
   const updateQuantity = (type) => {
@@ -37,14 +46,6 @@ const ProductView = (props) => {
       setQuantity(quantity - 1 < 1 ? 1 : quantity - 1);
     }
   };
-
-  // set reload product before buy
-  useEffect(() => {
-    setPreviewImg(product.image01);
-    setQuantity(1);
-    setColor(undefined);
-    setSize(undefined);
-  }, [product]);
 
   // check use select product
   const check = () => {
@@ -68,7 +69,6 @@ const ProductView = (props) => {
   };
 
   // add to cart
-
   const addToCart = () => {
     if (check()) {
       dispatch(
@@ -108,24 +108,40 @@ const ProductView = (props) => {
         </div>
 
         <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
-          <div className="product-description__title">Chi tiết sản phẩm</div>
-          <div
-            className="product-description__content"
-            dangerouslySetInnerHTML={{ __html: product.description }}
-          ></div>
-
-          <div className="product-description__toggle">
-            <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
-              {descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
-            </Button>
-          </div>
+          <div className="product-description__title">Mô tả sản phẩm</div>
+          {productTutorial.map((item, index) => (
+            <Dropdown key={index} title={item.title} content={item.content} />
+          ))}
         </div>
       </div>
 
       <div className="product__info">
         <h1 className="product__info__title">{product.title}</h1>
         <div className="product__info__item">
-          <span className="product__info__item__price">{numberWithCommas(product.price)}</span>
+          <p className="product__info__item__code">
+            <span>Mã sản phẩm:</span>
+            <span>Đang cập nhật...</span>
+          </p>
+
+          <p className="product__info__item__brand">
+            <span>Thương hiệu:</span>
+            <span>Converse</span>
+          </p>
+
+          <p className="product__info__item__status">
+            <span>Tình trạng:</span>
+            <span>Còn hàng</span>
+          </p>
+
+          <p className="product__info__item__price">
+            {formatPrice(product.price)}
+
+            <span className="product__info__item__price__old">
+              <del>{formatPrice(399999)}</del>
+            </span>
+          </p>
+
+          <p className="product__info__item__percent">Gía khuyến mãi 40%</p>
         </div>
 
         <div className="product__info__item">
@@ -180,8 +196,10 @@ const ProductView = (props) => {
         </div>
 
         <div className="product__info__item">
-          <Button onClick={addToCart}>Thêm vào giỏ</Button>
-          <Button onClick={gotoCart}>Mua ngay</Button>
+          <div className="btn-action">
+            <Button onClick={addToCart}>Thêm vào giỏ</Button>
+            <Button onClick={gotoCart}>Mua ngay</Button>
+          </div>
         </div>
 
         <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
@@ -195,6 +213,45 @@ const ProductView = (props) => {
             <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
               {descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
             </Button>
+          </div>
+        </div>
+      </div>
+
+      <div className="product__service">
+        <div className="product__service__item">
+          <div className="product__service__item__icon">
+            <img src={policy_icon1} alt="" />
+          </div>
+          <div className="product__service__item__content">
+            <h4>Free ship</h4>
+            <p>Miễn phí vận chuyển nội thành</p>
+          </div>
+        </div>
+        <div className="product__service__item">
+          <div className="product__service__item__icon">
+            <img src={policy_icon2} alt="" />
+          </div>
+          <div className="product__service__item__content">
+            <h4>Đổi trả hàng</h4>
+            <p>Đổi trả lên tới 30 ngày</p>
+          </div>
+        </div>
+        <div className="product__service__item">
+          <div className="product__service__item__icon">
+            <img src={policy_icon3} alt="" />
+          </div>
+          <div className="product__service__item__content">
+            <h4>Khuyến mãi</h4>
+            <p>Nhiều khuyến mãi lớn</p>
+          </div>
+        </div>
+        <div className="product__service__item">
+          <div className="product__service__item__icon">
+            <img src={policy_icon4} alt="" />
+          </div>
+          <div className="product__service__item__content">
+            <h4>Hotline</h4>
+            <p>1900 6750</p>
           </div>
         </div>
       </div>

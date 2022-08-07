@@ -1,9 +1,9 @@
-import NewsCard from 'components/News/NewCard';
-import Section from 'components/Sections/Section';
-import SectionBody from 'components/Sections/SectionBody';
-import SectionTitle from 'components/Sections/SectionTitle';
+import NewsCard from 'Client/components/News/NewCard';
+import Section from 'Client/components/Sections/Section';
+import SectionBody from 'Client/components/Sections/SectionBody';
+import SectionTitle from 'Client/components/Sections/SectionTitle';
 import React from 'react';
-import Grid from 'shared/GirdTemplate/Components/Grid';
+import Grid from 'shared/grid/Components/Grid';
 
 const New = () => {
   return (

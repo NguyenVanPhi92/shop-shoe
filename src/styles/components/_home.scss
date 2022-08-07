@@ -16,20 +16,25 @@
           }
 
           .sale-percent {
-            top: 15px;
-            left: 8px;
+            top: 12px;
+            left: 20px;
 
             @include mobile {
-              left: 26px;
+              top: 15px;
+              left: 8px;
             }
           }
 
           .product-new {
+            transform: rotate(0);
             top: 12px;
-            right: 6px;
+            right: 20px;
 
             @include mobile {
-              right: 24px;
+              transform: rotate(0);
+
+              top: 16px;
+              right: 48px;
             }
           }
         }

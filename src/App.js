@@ -1,7 +1,7 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Footer from 'Client/components/Footer';
+import Header from 'Client/components/Header';
+import ProductViewModal from 'Client/components/Products/ProductViewModal';
 import RoutesPage from 'routes/RoutesPage';
-import ProductViewModal from './components/Products/ProductViewModal';
 
 const Layout = () => {
   return (

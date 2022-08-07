@@ -1,14 +1,13 @@
-import React from 'react';
+import Cart from 'Client/Layout/Cart';
+import Catalog from 'Client/Layout/Catalog';
+import Contact from 'Client/Layout/Contact';
+import Female from 'Client/Layout/Female';
+import Home from 'Client/Layout/Home';
+import Male from 'Client/Layout/Male';
+import News from 'Client/Layout/News';
+import Pay from 'Client/Layout/Pay';
+import Product from 'Client/Layout/Product';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../Layout/Home';
-import Product from '../Layout/Product';
-import Catalog from '../Layout/Catalog';
-import Cart from '../Layout/Cart';
-import Male from 'Layout/Male';
-import Female from 'Layout/Female';
-import Contact from 'Layout/Contact';
-import News from 'Layout/News';
-import Pay from 'Layout/Pay';
 
 const RoutesPage = () => {
   return (

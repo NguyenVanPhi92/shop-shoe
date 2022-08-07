@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Grid from '../shared/GirdTemplate/Components/Grid';
+import Grid from '../../shared/grid/Components/Grid';
 import logo from 'shared/assets/images/Logo-2.png';
 
 const footerAboutLinks = [

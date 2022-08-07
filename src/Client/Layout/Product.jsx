@@ -1,11 +1,11 @@
 import productData from 'shared/assets/fake-data/products';
-import Grid from 'shared/GirdTemplate/Components/Grid';
-import Helmet from 'components/Helmet';
-import ProductCard from 'components/Products/ProductCard';
-import ProductView from 'components/Products/ProductView';
-import Section from 'components/Sections/Section';
-import SectionBody from 'components/Sections/SectionBody';
-import SectionTitle from 'components/Sections/SectionTitle';
+import Grid from 'shared/grid/Components/Grid';
+import Helmet from 'Client/components/Helmet';
+import ProductCard from 'Client/components/Products/ProductCard';
+import ProductView from 'Client/components/Products/ProductView';
+import Section from 'Client/components/Sections/Section';
+import SectionBody from 'Client/components/Sections/SectionBody';
+import SectionTitle from 'Client/components/Sections/SectionTitle';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 

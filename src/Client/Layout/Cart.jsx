@@ -1,11 +1,11 @@
 import productData from 'shared/assets/fake-data/products';
-import Button from 'components/Button';
-import CartItems from 'components/Cart/CartItems';
-import Helmet from 'components/Helmet';
+import Button from 'Client/components/Button';
+import CartItems from 'Client/components/Cart/CartItems';
+import Helmet from 'Client/components/Helmet';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import numberWithCommas from 'utils/NumberWithCommas';
+import { formatPrice } from 'utils/formatPrice';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartItems.value);
@@ -31,7 +31,7 @@ const Cart = () => {
 
             <div className="cart__info__txt__price">
               <span>Thành tiền</span>
-              <span> {numberWithCommas(totalPrice)}</span>
+              <span> {formatPrice(totalPrice)}</span>
             </div>
           </div>
 

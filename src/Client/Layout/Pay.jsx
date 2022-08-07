@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { runFireworks } from 'utils/ConfettiFireworks';
+import { runFireworks } from 'utils/confettiFireworks';
 
 const Pay = (props) => {
   useEffect(() => {
