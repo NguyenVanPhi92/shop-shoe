@@ -1,6 +1,6 @@
 import productData from 'shared/assets/fake-data/products';
 import { useState, useEffect } from 'react';
-import Button from 'Client/components/Button';
+import Button from 'Client/components/Form/Button/Button';
 import React from 'react';
 import ProductView from './ProductView';
 import { useSelector, useDispatch } from 'react-redux';

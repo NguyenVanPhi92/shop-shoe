@@ -1,4 +1,4 @@
-import Button from 'Client/components/Button';
+import Button from 'Client/components/Form/Button/Button';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

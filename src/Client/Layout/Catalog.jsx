@@ -3,12 +3,13 @@ import colors from 'shared/assets/fake-data/product-color';
 import price from 'shared/assets/fake-data/product-price';
 import size from 'shared/assets/fake-data/product-size';
 import productData from 'shared/assets/fake-data/products';
-import Button from 'Client/components/Button';
-import CheckBox from 'Client/components/CheckBox';
+import Button from 'Client/components/Form/Button/Button';
+import CheckBox from 'Client/components/Form/Checkbox/CheckBox';
 import Helmet from 'Client/components/Helmet';
 import InfinityList from 'Client/components/InfinityList';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import BreakCrumb from 'Client/components/BreakCrumb';
+import { Outlet } from 'react-router-dom';
 
 const Catalog = () => {
   const intiFilter = {

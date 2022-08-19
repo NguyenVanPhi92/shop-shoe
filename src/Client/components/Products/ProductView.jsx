@@ -1,4 +1,4 @@
-import Button from 'Client/components/Button';
+import Button from 'Client/components/Form/Button/Button';
 import Dropdown from 'Client/components/Dropdown/Dropdown';
 import productTutorial from 'Client/components/Dropdown/tutorialByproduct';
 import PropTypes from 'prop-types';

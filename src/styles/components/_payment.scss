@@ -1,0 +1,41 @@
+.payment {
+  grid-template-columns: 2fr 1fr;
+
+  color: red;
+  &__info {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 20px;
+
+    &__customer {
+      &__logo {
+        color: $main-color;
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+        line-height: 1;
+      }
+
+      &__account {
+        @include flex(center, space-between);
+        margin: 10px 0;
+
+        &__text {
+        }
+
+        &__login {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          gap: 5px;
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__product {
+    padding-left: 20px;
+  }
+}

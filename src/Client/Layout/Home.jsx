@@ -7,7 +7,7 @@ import Section from 'Client/components/Sections/Section';
 import SectionBody from 'Client/components/Sections/SectionBody';
 import SectionTitle from 'Client/components/Sections/SectionTitle';
 import Slider from 'Client/components/Slider';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import heroSliderData from 'shared/assets/fake-data/hero-slider';
 import policy from 'shared/assets/fake-data/policy';
 import productData from 'shared/assets/fake-data/products';
@@ -145,6 +145,8 @@ const Home = () => {
         </SectionBody>
       </Section>
       {/*end news fashion section */}
+
+      <Outlet />
     </Helmet>
   );
 };
