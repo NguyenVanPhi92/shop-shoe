@@ -1,4 +1,4 @@
-import Button from 'Client/components/Button';
+import Button from 'Client/components/Form/Button/Button';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';

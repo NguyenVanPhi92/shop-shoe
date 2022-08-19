@@ -6,17 +6,19 @@ import ProductView from 'Client/components/Products/ProductView';
 import Section from 'Client/components/Sections/Section';
 import SectionBody from 'Client/components/Sections/SectionBody';
 import SectionTitle from 'Client/components/Sections/SectionTitle';
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 
 const Product = (props) => {
   const { id } = useParams();
+  const location = useLocation();
   const product = productData.getProductBySlug(id);
   const relatedProducts = productData.getProducts(4);
 
-  // useEffect(() => {
-  //   window.screenTop(0, 0);
-  // }, []);
+  // scroll top when clicking action between pages
+  useEffect(() => {
+    window.scrollTo(0, 0, 'smooth');
+  }, [location]);
 
   return (
     <Helmet title={product.title}>

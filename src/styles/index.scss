@@ -5,7 +5,7 @@
 @import './components/_header.scss';
 @import './components/_footer.scss';
 @import './components/_hero_slider.scss';
-@import './components/_button.scss';
+@import './components/form/_button.scss';
 @import './components/_section.scss';
 @import './components/_policy_card.scss';
 @import './components/_product-card.scss';
@@ -19,3 +19,5 @@
 @import '../shared/grid/sass//_areas.scss';
 @import './components/_news_card.scss';
 @import './components/_dropdown.scss';
+@import './components/form/_input-field.scss';
+@import './components/_payment.scss';

@@ -1,5 +1,5 @@
 import productData from 'shared/assets/fake-data/products';
-import Button from 'Client/components/Button';
+import Button from 'Client/components/Form/Button/Button';
 import CartItems from 'Client/components/Cart/CartItems';
 import Helmet from 'Client/components/Helmet';
 import { useState, useEffect } from 'react';
