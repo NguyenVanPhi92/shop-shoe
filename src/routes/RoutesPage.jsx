@@ -1,22 +1,21 @@
 import App from 'App';
-import Login from 'Client/auth/Login/Login';
-import Register from 'Client/auth/Register/Register';
-import Cart from 'Client/Layout/Cart';
-import Catalog from 'Client/Layout/Catalog';
-import Contact from 'Client/Layout/Contact';
-import Female from 'Client/Layout/Female';
-import Home from 'Client/Layout/Home';
-import Male from 'Client/Layout/Male';
-import News from 'Client/Layout/News';
-import NotFound from 'Client/Layout/NotFound';
-import Pay from 'Client/Layout/Pay';
-import Product from 'Client/Layout/Product';
+import Login from 'container/auth/Login/Login';
+import Register from 'container/auth/Register/Register';
+import Cart from 'container/pages/Cart';
+import News from 'container/pages/News';
+import Catalog from 'container/pages/Catalog';
+import Contact from 'container/pages/Contact';
+import Female from 'container/pages/Female';
+import Home from 'container/pages/Home';
+import Male from 'container/pages/Male';
+import NotFound from 'container/pages/NotFound';
+import Pay from 'container/pages/Pay';
+import Product from 'container/pages/Product';
 import { Route, Routes } from 'react-router-dom';
 
 const RoutesPage = () => {
   return (
     <Routes>
-      {/* ERROR ROUTING PRODUCT ID CHƯA XONG PHẦN ROUTING PRODUCT DETAIL*/}
       <Route path="/" element={<Home />} />
       <Route path="/catalog" element={<Catalog />} />
       <Route path="/catalog/:id" element={<Product />} />

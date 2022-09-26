@@ -1,57 +1,117 @@
 .section {
-  margin-bottom: 80px;
+    margin-bottom: 40px;
 
-  & > * ~ * {
-    margin-top: 30px;
-  }
-
-  &__title {
-    font-size: 2rem;
-    @include flex(center, space-between);
-    border-bottom: 1px solid rgb(228, 228, 228);
-    padding-bottom: 20px;
-    color: $black-color;
-
-    div {
-      font-weight: 600;
-      font-size: 2.4rem;
-      position: relative;
-      margin-left: 20px;
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 45px;
-        left: -20px;
-        top: 0;
-        background-color: $main-color;
-      }
+    & > * ~ * {
+        margin-top: 30px;
     }
 
-    button {
-      cursor: pointer;
-      border: none;
-      padding: 10px 15px;
-      color: $btn-main-color;
-      background-color: $cyan-color;
+    &__title {
+        font-size: 2rem;
+        @include flex(center, space-between);
+        border-bottom: 1px solid rgb(228, 228, 228);
+        padding-bottom: 20px;
+        color: $font-color;
 
-      box-shadow: 1px 4px 5px 0px rgba(203, 200, 200, 0.75);
-      -webkit-box-shadow: 1px 4px 5px 0px rgba(206, 206, 206, 0.75);
-      -moz-box-shadow: 1px 4px 5px 0px rgba(203, 203, 203, 0.75);
+        div.title {
+            font-weight: 600;
+            font-size: 2.4rem;
+            position: relative;
+            margin-left: 20px;
+            width: 30%;
 
-      &:hover {
-        box-shadow: 1px 4px 5px 0px rgba(132, 130, 130, 0.75);
-        -webkit-box-shadow: 1px 4px 5px 0px rgba(154, 154, 154, 0.75);
-        -moz-box-shadow: 1px 4px 5px 0px rgba(167, 167, 167, 0.75);
-      }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 45px;
+                left: -20px;
+                top: 0;
+                background-color: $font-color;
+            }
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+
+            @include mobile {
+                font-size: 1.6rem;
+                width: 350px;
+            }
+        }
+        .menu {
+            width: 65%;
+            ul {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+
+                @include tablet {
+                    gap: 15px;
+                }
+
+                @include mobile {
+                    gap: 5px;
+                }
+
+                li {
+                    color: $black-color;
+                    font-size: 1.3rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $font-color;
+                    }
+
+                    @include tablet {
+                        gap: 10px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .btn_read_more {
+            width: 15%;
+            button {
+                cursor: pointer;
+                border: none;
+                padding: 10px 15px;
+                color: $btn-main-color;
+                background-color: #3b5057;
+                float: right;
+
+                border-radius: 2px;
+
+                box-shadow: 1px 4px 5px 0px rgba(203, 200, 200, 0.75);
+                -webkit-box-shadow: 1px 4px 5px 0px rgba(206, 206, 206, 0.75);
+                -moz-box-shadow: 1px 4px 5px 0px rgba(203, 203, 203, 0.75);
+
+                &:hover {
+                    box-shadow: 1px 4px 5px 0px rgba(132, 130, 130, 0.75);
+                    -webkit-box-shadow: 1px 4px 5px 0px rgba(154, 154, 154, 0.75);
+                    -moz-box-shadow: 1px 4px 5px 0px rgba(167, 167, 167, 0.75);
+                }
+
+                @include tablet {
+                    font-size: 0.8rem;
+                    padding: 10px 8px;
+                }
+            }
+            @include mobile {
+                display: none;
+            }
+        }
     }
-  }
 
-  &__body {
-    .banner-big {
-      height: 300px;
-      object-fit: cover;
+    &__body {
+        .banner-big {
+            height: 300px;
+            object-fit: cover;
+        }
     }
-  }
 }

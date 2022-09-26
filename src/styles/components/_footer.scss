@@ -1,45 +1,57 @@
 .footer {
-  padding: 70px 0;
-  box-shadow: $box-shadow;
-  font-size: 1.1rem;
+    padding: 70px 0;
+    box-shadow: $box-shadow;
+    font-size: 1.1rem;
 
-  .social {
-    @include flex(center, space-evenly);
-    margin-bottom: 30px;
+    .social {
+        @include flex(center, space-evenly);
+        margin-bottom: 30px;
 
-    &__item {
-      @include flex(center, space-between);
-      font-size: 1.4rem;
+        &__item {
+            @include flex(center, space-between);
+            font-size: 1.4rem;
+            cursor: pointer;
 
-      &__title {
-        margin-right: 8px;
-      }
+            &:hover {
+                .social__item__title,
+                .social__item__icon {
+                    color: $font-color;
+                }
+            }
 
-      &__icon {
-        font-size: 1.8rem;
-      }
+            &__title {
+                margin-right: 8px;
+            }
+
+            &__icon {
+                font-size: 1.8rem;
+            }
+        }
     }
-  }
 
-  &__logo {
-    height: 38px;
-  }
-
-  &__about {
-    p {
-      margin-bottom: 2rem;
+    &__logo {
+        height: 38px;
     }
-  }
 
-  &__title {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-weight: 600;
-  }
-
-  &__content {
-    p {
-      margin-bottom: 1.25rem;
+    &__about {
+        p {
+            margin-bottom: 2rem;
+        }
     }
-  }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    @include mobile {
+        padding: 40px 0;
+    }
 }

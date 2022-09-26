@@ -1,44 +1,72 @@
 .section {
-  &__body {
-    .product-hot {
-      .product-card {
-        &:hover {
-          box-shadow: 1px 1px 20px 1px #eeeeee;
-          -webkit-box-shadow: 1px 1px 20px 1px #eeeeee;
-          -moz-box-shadow: 1px 1px 20px 1px #eeeeee;
-        }
+    &__body {
+        .product-hot {
+            .product-card {
+                border: 1px solid #eee;
+                border-radius: 3px;
 
-        &__image {
-          img {
-            padding-top: 15px;
-            width: 80%;
-            object-fit: cover;
-          }
+                &__image {
+                    img {
+                        padding: 5px;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
 
-          .sale-percent {
-            top: 12px;
-            left: 20px;
+                    .sale-percent {
+                        top: 12px;
+                        left: 20px;
 
-            @include mobile {
-              top: 15px;
-              left: 8px;
+                        @include mobile {
+                            top: 15px;
+                            left: 8px;
+                        }
+                    }
+
+                    .product-new,
+                    .sale-percent,
+                    .product-hot {
+                        display: none;
+                    }
+                }
+
+                &__btn {
+                    display: none;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                &__content {
+                    padding: 15px 3px;
+                    text-align: left;
+
+                    @include mobile {
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                &__price {
+                    margin-top: 15px;
+                    font-size: 1.2rem;
+
+                    span {
+                        font-size: 1rem;
+                    }
+
+                    @include mobile {
+                        font-size: 2rem;
+
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
             }
-          }
-
-          .product-new {
-            transform: rotate(0);
-            top: 12px;
-            right: 20px;
-
-            @include mobile {
-              transform: rotate(0);
-
-              top: 16px;
-              right: 48px;
-            }
-          }
         }
-      }
     }
-  }
 }
