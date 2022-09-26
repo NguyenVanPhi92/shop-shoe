@@ -1,4 +1,19 @@
 .input_group {
+  @include flex(center, center);
+  flex-direction: column;
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 1rem;
+    color: #7f8fa6;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+
   input {
     border-radius: 4px;
     width: 100%;

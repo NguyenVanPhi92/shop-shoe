@@ -1,93 +1,84 @@
 .product-card {
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center;
 
-  &__image {
-    padding-top: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
+    &__image {
+        position: relative;
+        // hiệu ứng ảnh
 
-    // hiệu ứng ảnh
-    img {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100%;
+        .promotion {
+            width: 50px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
 
-      &:nth-child(1) {
-        transform: translateX(-50%) scale(1);
-        transition: transform 0.5s ease;
-      }
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
 
-      &:nth-child(2) {
-        transform: translateX(-50%) scale(0);
-      }
+            @include tablet {
+                width: 40px;
+            }
+
+            @include mobile {
+                width: 35px;
+            }
+        }
+
+        .sale-percent,
+        .product-new,
+        .product-hot {
+            padding: 3px 6px;
+            background-color: $product-new-color;
+            color: $btn-main-color;
+            outline: none;
+            border: none;
+            border-radius: 3px;
+
+            @include tablet {
+                padding: 2px 4px;
+                font-size: 0.8rem;
+            }
+        }
+
+        .sale-percent {
+            background-color: $product-sale-color;
+        }
+
+        .product-new {
+            background-color: $product-new-color;
+        }
+
+        .product-hot {
+            background-color: $product-hot-color;
+        }
     }
 
-    .sale-percent {
-      position: absolute;
-      top: 0;
-      left: 40px;
-      padding: 5px 10px;
-      background-color: $sale-color;
-      color: $btn-main-color;
-      outline: none;
-      border: none;
-      border-radius: 3px;
+    &__name {
+        color: $txt-second-color;
+        font-size: 1rem;
+        font-weight: normal;
     }
 
-    .product-new {
-      position: absolute;
-      top: 0;
-      right: 22px;
-      padding: 5px 10px;
-      background-color: $product-new-color;
-      color: $btn-main-color;
-      outline: none;
-      border: none;
-      border-radius: 3px;
-      transform: rotate(45deg);
+    &__price {
+        color: $font-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 3px;
+
+        &__old {
+            color: $txt-second-color;
+            margin-left: 20px;
+            font-weight: 300;
+
+            font-size: 1.2rem;
+        }
     }
 
-    &:hover img {
-      &:nth-child(1) {
-        transform: translateX(-50%) scale(0);
-      }
+    &__btn {
+        margin-bottom: 15px;
 
-      &:nth-child(2) {
-        transform: translateX(-50%) scale(1);
-        transition: transform 0.5s ease;
-      }
+        @include tablet {
+            display: none;
+        }
     }
-  }
-
-  &__name {
-    margin-bottom: 10px;
-    color: $txt-second-color;
-    font-size: 1.25rem;
-    font-weight: normal;
-  }
-
-  &__price {
-    color: $txt-main-bg;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-
-    &__old {
-      color: $txt-second-color;
-      margin-left: 20px;
-      font-weight: 300;
-    }
-  }
-
-  &__btn {
-    margin-bottom: 15px;
-
-    @include tablet {
-      display: none;
-    }
-  }
 }

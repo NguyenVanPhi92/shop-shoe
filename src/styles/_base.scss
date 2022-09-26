@@ -4,99 +4,106 @@
 
 //reset web
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  --webkit-tap-highlight-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --webkit-tap-highlight-color: transparent;
 }
 
 html {
-  font-size: 13px;
+    font-size: 13px;
 
-  @include mobile {
-    font-size: 11px;
-  }
+    @include mobile {
+        font-size: 11px;
+    }
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 a {
-  text-decoration: none;
-  color: unset;
-  outline: none;
+    text-decoration: none;
+    color: unset;
+    outline: none;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
+//loop chia bản màu
 @each $color, $val in $colors {
-  .color-#{$color} {
-    color: $val;
-  }
-
-  .bg-#{$color} {
-    background-color: $val;
-  }
-}
-
-@each $val in $numbers {
-  .grid-col-#{$val} {
-    grid-template-columns: repeat($val, 1fr);
-  }
-}
-
-@each $val in $numbers {
-  .grid-col-md-#{$val} {
-    @include tablet {
-      grid-template-columns: repeat($val, 1fr);
+    .color-#{$color} {
+        color: $val;
     }
-  }
+
+    .bg-#{$color} {
+        background-color: $val;
+    }
 }
 
+//loop chia columns => 12
 @each $val in $numbers {
-  .grid-col-sm-#{$val} {
-    @include mobile {
-      grid-template-columns: repeat($val, 1fr);
+    //class
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
     }
-  }
+}
+
+// loop chia columns md => 12
+@each $val in $numbers {
+    //class
+    .grid-col-md-#{$val} {
+        @include tablet {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+// loop chia columns sm => 12
+@each $val in $numbers {
+    //class
+    .grid-col-sm-#{$val} {
+        @include mobile {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
 }
 
 .container {
-  width: 100%;
-  max-width: 1620px;
-  padding: 0 150px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1620px;
+    padding: 0 100px;
+    margin: 0 auto;
 
-  @include tablet {
-    padding: 0 20px;
-  }
+    @include tablet {
+        padding: 0 20px;
+    }
 
-  @include mobile {
-    padding: 0 10px;
-  }
+    @include mobile {
+        padding: 0 10px;
+    }
 }
 
 .main {
-  margin-top: $header-height;
-  margin-bottom: 2rem;
-  min-height: 100vh;
+    margin-bottom: 2rem;
+    min-height: 100vh;
 
-  @include tablet {
-    margin-top: calc(#{$header-tablet-height} + 20px);
-  }
+    @include tablet {
+        margin-top: 20px;
+    }
 
-  @include mobile {
-    margin-top: calc(#{$header-tablet-height} + 10px);
-  }
+    @include mobile {
+        margin-top: 20px;
+    }
 }
 
 .grid {
-  display: grid;
+    display: grid;
 }
