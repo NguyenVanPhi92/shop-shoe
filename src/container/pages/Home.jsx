@@ -1,15 +1,11 @@
 import Helmet from 'container/components/Helmet';
-import HeroSlider from 'container/components/Hero/HeroSlider';
 import NewsCard from 'container/components/News/NewCard';
-import PolicyCart from 'container/components/Policy/PolicyCart';
 import ProductCard from 'container/components/Products/ProductCard';
 import Section from 'container/components/Sections/Section';
 import SectionBody from 'container/components/Sections/SectionBody';
 import SectionTitle from 'container/components/Sections/SectionTitle';
 import Slider from 'container/components/Slider';
-import { Link, Outlet } from 'react-router-dom';
-import heroSliderData from 'shared/assets/fake-data/hero-slider';
-import policy from 'shared/assets/fake-data/policy';
+import { Outlet } from 'react-router-dom';
 import productData from 'shared/assets/fake-data/products';
 import { banner_home, sale } from 'shared/assets/images';
 import Grid from 'shared/grid/components/Grid';

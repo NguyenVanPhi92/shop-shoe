@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '../../shared/grid/components/Grid';
-import logo from 'shared/assets/images/Logo-2.png';
+import logo from 'shared/assets/images/logo.png';
+import InputField from './Form/Input/InputField';
+import Section from './Sections/Section';
+import Button from './Form/Button/Button';
 
 const footerAboutLinks = [
     {
@@ -99,6 +102,15 @@ const Footer = () => {
                         </Link>
                     ))}
                 </div>
+
+                {/* Form FeedBack  */}
+                <Section>
+                    <form className="form__email">
+                        <p className="form__email__title">Đăng kí nhận thông tin từ chúng tôi</p>
+                        <InputField placeholder="Nhập email của bạn" />
+                        <Button className="form__email__btn">ĐĂNG KÍ NGAY</Button>
+                    </form>
+                </Section>
 
                 <Grid col={5} mdCol={2} smCol={1} gap={25}>
                     <div>

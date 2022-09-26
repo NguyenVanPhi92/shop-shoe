@@ -2,6 +2,7 @@
     padding: 70px 0;
     box-shadow: $box-shadow;
     font-size: 1.1rem;
+    background-color: #f2f2f2;
 
     .social {
         @include flex(center, space-evenly);
@@ -53,5 +54,23 @@
 
     @include mobile {
         padding: 40px 0;
+    }
+
+    .section {
+        .form__email {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            &__title {
+                font-size: 1.4rem;
+                color: $black-color;
+            }
+
+            .input_group {
+                width: 600px;
+            }
+        }
     }
 }
