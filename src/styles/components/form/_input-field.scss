@@ -1,38 +1,39 @@
 .input_group {
-  @include flex(center, center);
-  flex-direction: column;
-  position: relative;
+    @include flex(center, center);
+    flex-direction: column;
+    position: relative;
 
-  span {
-    position: absolute;
-    left: 0;
-    padding: 10px;
-    font-size: 1rem;
-    color: #7f8fa6;
-    text-transform: uppercase;
-    pointer-events: none;
-    transition: 0.2s;
-  }
-
-  input {
-    border-radius: 4px;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    padding: 0.94rem 0.8rem;
-    outline: none;
-    border: 1px #d9d9d9 solid;
-    height: 44px;
-    background-color: #fff;
-    color: #333;
-
-    &:focus {
-      border: 1px solid rgb(171, 169, 169);
+    span {
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        font-size: 1rem;
+        color: #7f8fa6;
+        text-transform: uppercase;
+        pointer-events: none;
+        transition: 0.2s;
     }
 
-    &::placeholder {
-      color: #bebebe;
-      font-weight: lighter;
+    input {
+        border-radius: 4px;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 0.4rem 0.8rem;
+        outline: none;
+        border: 1px #d9d9d9 solid;
+        height: 44px;
+        background-color: #fff;
+        color: #333;
+        font-size: 1.3rem;
+
+        &:focus {
+            border: 1px solid rgb(171, 169, 169);
+        }
+
+        &::placeholder {
+            color: #bebebe;
+            font-weight: lighter;
+        }
     }
-  }
 }

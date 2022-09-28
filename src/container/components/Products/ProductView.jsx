@@ -82,12 +82,17 @@ const ProductView = (props) => {
             );
 
             alert('success');
+            navigate('/cart');
         }
     };
 
     return (
         <div className="product">
             <div className="product__images">
+                <div className="product__images__main">
+                    <img src={previewImg} alt="" />
+                </div>
+
                 <div className="product__images__list">
                     <div
                         className="product__images__list__item"
@@ -101,17 +106,24 @@ const ProductView = (props) => {
                     >
                         <img src={product.image02} alt="" />
                     </div>
-                </div>
-
-                <div className="product__images__main">
-                    <img src={previewImg} alt="" />
-                </div>
-
-                <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
-                    <div className="product-description__title">Mô tả sản phẩm</div>
-                    {productTutorial.map((item, index) => (
-                        <Dropdown key={index} title={item.title} content={item.content} />
-                    ))}
+                    <div
+                        className="product__images__list__item"
+                        onClick={() => setPreviewImg(product.image02)}
+                    >
+                        <img src={product.image02} alt="" />
+                    </div>
+                    <div
+                        className="product__images__list__item"
+                        onClick={() => setPreviewImg(product.image02)}
+                    >
+                        <img src={product.image02} alt="" />
+                    </div>
+                    <div
+                        className="product__images__list__item"
+                        onClick={() => setPreviewImg(product.image02)}
+                    >
+                        <img src={product.image02} alt="" />
+                    </div>
                 </div>
             </div>
 
@@ -141,9 +153,12 @@ const ProductView = (props) => {
                         </span>
                     </p>
 
-                    <p className="product__info__item__percent">Gía khuyến mãi 40%</p>
+                    <p className="product__info__item__percent">
+                        Gía khuyến mãi <span>40%</span>
+                    </p>
                 </div>
 
+                {/* Colors */}
                 <div className="product__info__item">
                     <div className="product__info__item__title">Màu sắc</div>
                     <div className="product__info__item__list">
@@ -161,6 +176,7 @@ const ProductView = (props) => {
                     </div>
                 </div>
 
+                {/* Size */}
                 <div className="product__info__item">
                     <div className="product__info__item__title">Kích cở</div>
                     <div className="product__info__item__list">
@@ -178,6 +194,7 @@ const ProductView = (props) => {
                     </div>
                 </div>
 
+                {/* Quantity */}
                 <div className="product__info__item">
                     <div className="product__info__item__title">Số lượng</div>
                     <div className="product__info__item__quantity">
@@ -199,13 +216,17 @@ const ProductView = (props) => {
                     </div>
                 </div>
 
+                {/* Button */}
                 <div className="product__info__item">
                     <div className="btn-action">
                         <Button onClick={addToCart}>Thêm vào giỏ</Button>
-                        <Button onClick={gotoCart}>Mua ngay</Button>
+                        <Button onClick={gotoCart} backgroundColor="blue">
+                            Mua ngay
+                        </Button>
                     </div>
                 </div>
 
+                {/* Description Mobile */}
                 <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
                     <div className="product-description__title">Chi tiết sản phẩm</div>
                     <div
@@ -218,6 +239,14 @@ const ProductView = (props) => {
                             {descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
                         </Button>
                     </div>
+                </div>
+
+                {/* Description PC */}
+                <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
+                    <div className="product-description__title">Mô tả sản phẩm</div>
+                    {productTutorial.map((item, index) => (
+                        <Dropdown key={index} title={item.title} content={item.content} />
+                    ))}
                 </div>
             </div>
 

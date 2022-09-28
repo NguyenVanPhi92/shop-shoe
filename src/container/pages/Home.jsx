@@ -14,13 +14,13 @@ import GridAreas from 'shared/grid/components/GridAreas';
 const Home = () => {
     return (
         <Helmet title="trang chủ">
-            {/* banner */}
+            {/*BANNER*/}
             <Section>
                 <img src={banner_home} alt="" height="100%" />
             </Section>
-            {/* banner */}
+            {/*END*/}
 
-            {/*-- SLIDER SẢN PHẨM HOT NHẤT  */}
+            {/*SLIDER SẢN PHẨM HOT NHẤT  */}
             <Section>
                 <SectionTitle
                     btnContent="Xem tất cả"
@@ -32,7 +32,7 @@ const Home = () => {
             </Section>
             {/*END*/}
 
-            {/* -- SẢN PHẨM GIẢM GIÁ */}
+            {/*SẢN PHẨM GIẢM GIÁ */}
             <Section>
                 <SectionTitle
                     menu
@@ -66,7 +66,7 @@ const Home = () => {
             </Section>
             {/*END  */}
 
-            {/*-- SẢN PHẨM CÓ KHUYẾN MÃI*/}
+            {/*SẢN PHẨM CÓ KHUYẾN MÃI*/}
             <Section>
                 <SectionTitle menu title="KHUYẾN MÃI" btnContent="Xem tất cả" slug="/catalog" />
                 <SectionBody>
@@ -95,12 +95,12 @@ const Home = () => {
             </Section>
             {/*END */}
 
-            {/*  -- PHỤ KIỆN HOT*/}
+            {/*PHỤ KIỆN HOT*/}
             <Section>
                 <SectionTitle menu title="PHỤ KIỆN HOT" btnContent="Xem tất cả" slug="/catalog" />
                 <SectionBody>
                     <div className="product-hot">
-                        <Grid col={5} mdCol={2} smCol={1} gap="20">
+                        <Grid col={5} mdCol={2} smCol={1} gap={20}>
                             {productData.getProducts(10).map((item, index) => (
                                 <ProductCard
                                     key={index}
@@ -121,7 +121,7 @@ const Home = () => {
             </Section>
             {/*END  */}
 
-            {/* -- TIN TỨC HOT*/}
+            {/*TIN TỨC HOT*/}
             <Section>
                 <SectionTitle title="GÓC TIN TỨC" btnContent="Xem tất cả" slug="/news" />
                 <SectionBody>

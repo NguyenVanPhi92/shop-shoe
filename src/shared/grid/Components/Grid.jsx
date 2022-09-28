@@ -18,7 +18,6 @@ const Grid = (props) => {
     );
 };
 
-// các giá trị props đc truyền vào
 Grid.propTypes = {
     col: PropTypes.number.isRequired,
     mdCol: PropTypes.number,

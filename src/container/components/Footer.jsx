@@ -107,7 +107,7 @@ const Footer = () => {
                 <Section>
                     <form className="form__email">
                         <p className="form__email__title">Đăng kí nhận thông tin từ chúng tôi</p>
-                        <InputField placeholder="Nhập email của bạn" />
+                        <InputField type="text" name="email" placeholder="Nhập email của bạn" />
                         <Button className="form__email__btn">ĐĂNG KÍ NGAY</Button>
                     </form>
                 </Section>

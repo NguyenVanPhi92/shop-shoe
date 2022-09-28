@@ -1,38 +1,39 @@
-import App from 'App';
 import Login from 'container/auth/Login/Login';
 import Register from 'container/auth/Register/Register';
 import Cart from 'container/pages/Cart';
-import News from 'container/pages/News';
 import Catalog from 'container/pages/Catalog';
 import Contact from 'container/pages/Contact';
 import Female from 'container/pages/Female';
 import Home from 'container/pages/Home';
 import Male from 'container/pages/Male';
+import News from 'container/pages/News';
 import NotFound from 'container/pages/NotFound';
 import Pay from 'container/pages/Pay';
 import Product from 'container/pages/Product';
+import Success from 'container/pages/Success';
 import { Route, Routes } from 'react-router-dom';
 
 const RoutesPage = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/catalog" element={<Catalog />} />
-      <Route path="/catalog/:id" element={<Product />} />
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/catalog/:id" element={<Product />} />
 
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/news" element={<News />} />
-      <Route path="/male" element={<Male />} />
-      <Route path="/female" element={<Female />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/pay" element={<Pay />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/male" element={<Male />} />
+            <Route path="/female" element={<Female />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pay" element={<Pay />} />
 
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
+            <Route path="*" element={<NotFound />} />
+            <Route path="/success" element={<Success />} />
+        </Routes>
+    );
 };
 
 export default RoutesPage;
