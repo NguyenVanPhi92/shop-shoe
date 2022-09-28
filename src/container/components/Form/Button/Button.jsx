@@ -26,7 +26,7 @@ Button.propTypes = {
     size: PropTypes.string,
     icon: PropTypes.string,
     animate: PropTypes.bool,
-    onclick: PropTypes.func,
+    onClick: PropTypes.func,
 };
 
 export default Button;
