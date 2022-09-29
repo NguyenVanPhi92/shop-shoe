@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { logo } from 'shared/assets/images';
 
@@ -99,6 +100,7 @@ const mainNav = [
 
 const Header = () => {
     const { pathname } = useLocation(); // lấy ra path trên url
+    const cartItem = useSelector((state) => state.cartItems);
     // tìm so sánh path url với path menu nav
     const activeNav = mainNav.findIndex((e) => e.path === pathname);
 
@@ -186,7 +188,7 @@ const Header = () => {
                             </Link>
 
                             <div className="badge">
-                                <span>5</span>
+                                <span>{cartItem.value.length}</span>
                             </div>
                         </div>
                         <div className="header__menu__item header__menu__right__item">
