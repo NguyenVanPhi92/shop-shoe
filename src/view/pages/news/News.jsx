@@ -1,9 +1,9 @@
-import NewsCard from 'container/components/News/NewCard';
-import Section from 'container/components/Sections/Section';
-import SectionBody from 'container/components/Sections/SectionBody';
-import SectionTitle from 'container/components/Sections/SectionTitle';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import NewsCard from 'view/pages/news/NewCard';
+import Section from 'shared/components/Sections/Section';
+import SectionBody from 'shared/components/Sections/SectionBody';
+import SectionTitle from 'shared/components/Sections/SectionTitle';
 import Grid from 'shared/grid/components/Grid';
 
 const New = () => {

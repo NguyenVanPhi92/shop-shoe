@@ -1,12 +1,12 @@
-import Button from 'container/components/Form/Button/Button';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { set } from 'redux/product-modal/productModalSlice';
+import Button from 'shared/components/Form/Button/Button';
 import { formatPrice } from 'utils/formatPrice';
+
 const ProductCard = (props) => {
-    const { slug, img01, img02, productHot, name, productNew, sale, price, percentDiscount } =
-        props;
+    const { slug, img01, productHot, name, productNew, sale, price, percentDiscount } = props;
     const dispatch = useDispatch();
 
     return (

@@ -1,12 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import productData from 'shared/assets/fake-data/products';
+import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-import productData from 'shared/assets/fake-data/products';
-import { Autoplay, Pagination } from 'swiper';
-import ProductCard from './Products/ProductCard';
+import ProductCard from 'view/pages/product/components/ProductCard';
 
 const Slider = () => {
     const relatedProducts = productData.getProducts(12);

@@ -1,10 +1,10 @@
-import productData from 'shared/assets/fake-data/products';
-import Button from 'container/components/Form/Button/Button';
-import CartItems from 'container/components/Cart/CartItems';
-import Helmet from 'container/components/Helmet';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import productData from 'shared/assets/fake-data/products';
+import CartItems from 'shared/components/Cart/CartItems';
+import Button from 'shared/components/Form/Button/Button';
+import Helmet from 'shared/components/Helmet';
 import { formatPrice } from 'utils/formatPrice';
 
 const Cart = () => {

@@ -1,7 +1,7 @@
-import Footer from 'container/components/Footer';
-import Header from 'container/components/Header';
-import ProductViewModal from 'container/components/Products/ProductViewModal';
 import RoutesPage from 'routes/RoutesPage';
+import Footer from 'shared/components/Footer';
+import Header from 'shared/components/Header';
+import ProductViewModal from 'view/pages/product/components/ProductViewModal';
 
 const App = () => {
     return (

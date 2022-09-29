@@ -1,6 +1,3 @@
-import Button from 'container/components/Form/Button/Button';
-import Dropdown from 'container/components/Dropdown/Dropdown';
-import productTutorial from 'container/components/Dropdown/tutorialByproduct';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -8,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { remove } from 'redux/product-modal/productModalSlice';
 import { addItem } from 'redux/shopping-cart/cartItemsSlice';
 import { policy_icon1, policy_icon2, policy_icon3, policy_icon4 } from 'shared/assets/images';
+import Dropdown from 'shared/components/Dropdown/Dropdown';
+import productTutorial from 'shared/components/Dropdown/tutorialByproduct';
+import Button from 'shared/components/Form/Button/Button';
 import { formatPrice } from 'utils/formatPrice';
 
 const ProductView = (props) => {

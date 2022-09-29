@@ -1,9 +1,3 @@
-import Helmet from 'container/components/Helmet';
-import ProductCard from 'container/components/Products/ProductCard';
-import ProductView from 'container/components/Products/ProductView';
-import Section from 'container/components/Sections/Section';
-import SectionBody from 'container/components/Sections/SectionBody';
-import SectionTitle from 'container/components/Sections/SectionTitle';
 import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import productData from 'shared/assets/fake-data/products';
@@ -15,7 +9,13 @@ import {
     imageBrand5,
     imageBrand6,
 } from 'shared/assets/images/brand';
+import Helmet from 'shared/components/Helmet';
+import Section from 'shared/components/Sections/Section';
+import SectionBody from 'shared/components/Sections/SectionBody';
+import SectionTitle from 'shared/components/Sections/SectionTitle';
 import Grid from 'shared/grid/components/Grid';
+import ProductCard from './components/ProductCard';
+import ProductView from './components/ProductView';
 
 const Product = (props) => {
     const { id } = useParams();

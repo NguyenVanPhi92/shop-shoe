@@ -1,15 +1,14 @@
-import Helmet from 'container/components/Helmet';
-import NewsCard from 'container/components/News/NewCard';
-import ProductCard from 'container/components/Products/ProductCard';
-import Section from 'container/components/Sections/Section';
-import SectionBody from 'container/components/Sections/SectionBody';
-import SectionTitle from 'container/components/Sections/SectionTitle';
-import Slider from 'container/components/Slider';
-import { Outlet } from 'react-router-dom';
 import productData from 'shared/assets/fake-data/products';
 import { banner_home, sale } from 'shared/assets/images';
+import Helmet from 'shared/components/Helmet';
+import NewsCard from 'view/pages/news/NewCard';
+import Section from 'shared/components/Sections/Section';
+import SectionBody from 'shared/components/Sections/SectionBody';
+import SectionTitle from 'shared/components/Sections/SectionTitle';
+import Slider from 'shared/components/Slider';
 import Grid from 'shared/grid/components/Grid';
 import GridAreas from 'shared/grid/components/GridAreas';
+import ProductCard from './product/components/ProductCard';
 
 const Home = () => {
     return (
@@ -134,8 +133,6 @@ const Home = () => {
                 </SectionBody>
             </Section>
             {/*END */}
-
-            <Outlet />
         </Helmet>
     );
 };

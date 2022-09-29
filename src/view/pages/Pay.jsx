@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { runFireworks } from 'utils/confettiFireworks';
-import InputField from 'container/components/Form/Input/InputField';
-import { Link } from 'react-router-dom';
+import React from 'react';
+// import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import Button from 'container/components/Form/Button/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import InputField from 'shared/components/Form/Input/InputField';
+import Button from 'shared/components/Form/Button/Button';
 
 const Pay = (props) => {
     const cartItems = useSelector((state) => state.cartItems.value);

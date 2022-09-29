@@ -1,17 +1,17 @@
-import Login from 'container/auth/Login/Login';
-import Register from 'container/auth/Register/Register';
-import Cart from 'container/pages/Cart';
-import Catalog from 'container/pages/Catalog';
-import Contact from 'container/pages/Contact';
-import Female from 'container/pages/Female';
-import Home from 'container/pages/Home';
-import Male from 'container/pages/Male';
-import News from 'container/pages/News';
-import NotFound from 'container/pages/NotFound';
-import Pay from 'container/pages/Pay';
-import Product from 'container/pages/Product';
-import Success from 'container/pages/Success';
 import { Route, Routes } from 'react-router-dom';
+import Login from 'view/auth/Login/Login';
+import Register from 'view/auth/Register/Register';
+import Cart from 'view/pages/Cart';
+import Catalog from 'view/pages/Catalog';
+import Contact from 'view/pages/Contact';
+import Female from 'view/pages/Female';
+import Home from 'view/pages/Home';
+import Male from 'view/pages/Male';
+import News from 'view/pages/news/News';
+import NotFound from 'view/pages/NotFound';
+import Pay from 'view/pages/Pay';
+import Product from 'view/pages/product/Product';
+import Success from 'view/pages/Success';
 
 const RoutesPage = () => {
     return (

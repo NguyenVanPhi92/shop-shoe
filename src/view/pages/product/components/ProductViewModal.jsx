@@ -1,10 +1,9 @@
-import productData from 'shared/assets/fake-data/products';
-import { useState, useEffect } from 'react';
-import Button from 'container/components/Form/Button/Button';
-import React from 'react';
-import ProductView from './ProductView';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { remove } from 'redux/product-modal/productModalSlice';
+import productData from 'shared/assets/fake-data/products';
+import Button from 'shared/components/Form/Button/Button';
+import ProductView from './ProductView';
 
 const ProductViewModal = () => {
     // const product = productData.getProductBySlug('ao-thun-polo-04');

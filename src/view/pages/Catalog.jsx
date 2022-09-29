@@ -1,8 +1,3 @@
-import BreakCrumb from 'container/components/BreakCrumb';
-import Button from 'container/components/Form/Button/Button';
-import CheckBox from 'container/components/Form/Checkbox/CheckBox';
-import Helmet from 'container/components/Helmet';
-import InfinityList from 'container/components/InfinityList';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import category from 'shared/assets/fake-data/category';
@@ -10,6 +5,11 @@ import colors from 'shared/assets/fake-data/product-color';
 import price from 'shared/assets/fake-data/product-price';
 import size from 'shared/assets/fake-data/product-size';
 import productData from 'shared/assets/fake-data/products';
+import BreakCrumb from 'shared/components/BreakCrumb';
+import Button from 'shared/components/Form/Button/Button';
+import CheckBox from 'shared/components/Form/Checkbox/CheckBox';
+import Helmet from 'shared/components/Helmet';
+import InfinityList from 'shared/components/InfinityList';
 
 const Catalog = () => {
     const intiFilter = {
