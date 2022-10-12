@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Female = () => {
-  return <div>Female</div>;
-};
+    return <div>Female</div>
+}
 
-export default Female;
+export default Female

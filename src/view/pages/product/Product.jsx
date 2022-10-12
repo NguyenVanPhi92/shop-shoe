@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import productData from 'shared/assets/fake-data/products';
+import { useEffect } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
+import productData from 'shared/assets/fake-data/products'
 import {
     imageBrand1,
     imageBrand2,
@@ -8,25 +8,25 @@ import {
     imageBrand4,
     imageBrand5,
     imageBrand6,
-} from 'shared/assets/images/brand';
-import Helmet from 'shared/components/Helmet';
-import Section from 'shared/components/Sections/Section';
-import SectionBody from 'shared/components/Sections/SectionBody';
-import SectionTitle from 'shared/components/Sections/SectionTitle';
-import Grid from 'shared/grid/components/Grid';
-import ProductCard from './components/ProductCard';
-import ProductView from './components/ProductView';
+} from 'shared/assets/images/brand'
+import Helmet from 'shared/components/Helmet'
+import Section from 'shared/components/Sections/Section'
+import SectionBody from 'shared/components/Sections/SectionBody'
+import SectionTitle from 'shared/components/Sections/SectionTitle'
+import Grid from 'shared/grid/components/Grid'
+import ProductCard from './components/ProductCard'
+import ProductView from './components/ProductView'
 
-const Product = (props) => {
-    const { id } = useParams();
-    const location = useLocation();
-    const product = productData.getProductBySlug(id);
-    const relatedProducts = productData.getProducts(6);
+const Product = props => {
+    const { id } = useParams()
+    const location = useLocation()
+    const product = productData.getProductBySlug(id)
+    const relatedProducts = productData.getProducts(6)
 
     // scroll top when clicking action between pages
     useEffect(() => {
-        window.scrollTo(0, 0, 'smooth');
-    }, [location]);
+        window.scrollTo(0, 0, 'smooth')
+    }, [location])
 
     return (
         <Helmet title={product.title}>
@@ -94,7 +94,7 @@ const Product = (props) => {
                 </Section>
             </div>
         </Helmet>
-    );
-};
+    )
+}
 
-export default Product;
+export default Product

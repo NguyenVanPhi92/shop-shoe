@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Grid from '../../shared/grid/components/Grid';
-import logo from 'shared/assets/images/logo.png';
-import InputField from './Form/Input/InputField';
-import Section from './Sections/Section';
-import Button from './Form/Button/Button';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Grid from '../../shared/grid/components/Grid'
+import logo from 'shared/assets/images/logo.png'
+import InputField from './Form/Input/InputField'
+import Section from './Sections/Section'
+import Button from './Form/Button/Button'
 
 const footerAboutLinks = [
     {
@@ -27,7 +27,7 @@ const footerAboutLinks = [
         display: 'Hệ thống cửa hàng',
         path: '/about',
     },
-];
+]
 
 const footerCustomerLinks = [
     {
@@ -42,7 +42,7 @@ const footerCustomerLinks = [
         display: 'Chính sách hoàn tiền',
         path: '/about',
     },
-];
+]
 
 const footerContact = [
     {
@@ -61,7 +61,7 @@ const footerContact = [
         display: 'support@sapo.vn',
         path: '/about',
     },
-];
+]
 
 const footerSocial = [
     {
@@ -84,7 +84,7 @@ const footerSocial = [
         display: "<i class='bx bxl-instagram'></i>",
         path: '/about',
     },
-];
+]
 const Footer = () => {
     return (
         <footer className="footer">
@@ -167,15 +167,14 @@ const Footer = () => {
                             </Link>
                         </p>
                         <p>
-                            Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu
-                            người tiêu dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động,
-                            tích cực hơn.
+                            Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu dùng
+                            Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tích cực hơn.
                         </p>
                     </div>
                 </Grid>
             </div>
         </footer>
-    );
-};
+    )
+}
 
-export default Footer;
+export default Footer

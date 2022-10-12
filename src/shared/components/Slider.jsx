@@ -1,13 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import productData from 'shared/assets/fake-data/products';
-import { Autoplay, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import ProductCard from 'view/pages/product/components/ProductCard';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import productData from 'shared/assets/fake-data/products'
+import { Autoplay, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import ProductCard from 'view/pages/product/components/ProductCard'
 
 const Slider = () => {
-    const relatedProducts = productData.getProducts(12);
+    const relatedProducts = productData.getProducts(12)
     return (
         <>
             <Swiper
@@ -60,7 +60,7 @@ const Slider = () => {
                 ))}
             </Swiper>
         </>
-    );
-};
+    )
+}
 
-export default Slider;
+export default Slider

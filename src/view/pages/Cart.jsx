@@ -1,36 +1,31 @@
-import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
-import productData from 'shared/assets/fake-data/products';
-import CartItems from 'shared/components/Cart/CartItems';
-import Button from 'shared/components/Form/Button/Button';
-import Helmet from 'shared/components/Helmet';
-import { formatPrice } from 'utils/formatPrice';
+import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { Link, useLocation } from 'react-router-dom'
+import productData from 'shared/assets/fake-data/products'
+import CartItems from 'shared/components/Cart/CartItems'
+import Button from 'shared/components/Form/Button/Button'
+import Helmet from 'shared/components/Helmet'
+import { formatPrice } from 'utils/formatPrice'
 
 const Cart = () => {
-    const location = useLocation();
-    const cartItems = useSelector((state) => state.cartItems.value);
-    const [cartProducts, setCartProducts] = useState(productData.getCartItemDetail(cartItems));
-    const [totalProducts, setTotalProducts] = useState(0);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const location = useLocation()
+    const cartItems = useSelector(state => state.cartItems.value)
+    const [cartProducts, setCartProducts] = useState(productData.getCartItemDetail(cartItems))
+    const [totalProducts, setTotalProducts] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
-        setCartProducts(productData.getCartItemDetail(cartItems));
-        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0));
-        setTotalPrice(
-            cartItems.reduce(
-                (total, item) => total + Number(item.quantity) * Number(item.price),
-                0,
-            ),
-        );
-    }, [cartItems]);
+        setCartProducts(productData.getCartItemDetail(cartItems))
+        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
+        setTotalPrice(cartItems.reduce((total, item) => total + Number(item.quantity) * Number(item.price), 0))
+    }, [cartItems])
 
-    console.log(cartItems);
+    console.log(cartItems)
 
     // scroll top when clicking action between pages
     useEffect(() => {
-        window.scrollTo(0, 0, 'smooth');
-    }, [location]);
+        window.scrollTo(0, 0, 'smooth')
+    }, [location])
 
     return (
         <Helmet title="Giỏ hàng">
@@ -62,7 +57,7 @@ const Cart = () => {
                 </div>
             </div>
         </Helmet>
-    );
-};
+    )
+}
 
-export default Cart;
+export default Cart

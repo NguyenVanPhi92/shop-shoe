@@ -1,31 +1,31 @@
-import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
 
-const CheckBox = (props) => {
-  const inputRef = useRef(null);
+const CheckBox = props => {
+    const inputRef = useRef(null)
 
-  //handle
-  const onChange = () => {
-    if (props.onChange) {
-      props.onChange(inputRef.current);
+    //handle
+    const onChange = () => {
+        if (props.onChange) {
+            props.onChange(inputRef.current)
+        }
     }
-  };
 
-  return (
-    <label className="custom-checkbox">
-      <input type="checkbox" ref={inputRef} onChange={onChange} checked={props.checked} />
-      <span className="custom-checkbox__checkmark">
-        <i className="bx bx-check"></i>
-      </span>
+    return (
+        <label className="custom-checkbox">
+            <input type="checkbox" ref={inputRef} onChange={onChange} checked={props.checked} />
+            <span className="custom-checkbox__checkmark">
+                <i className="bx bx-check"></i>
+            </span>
 
-      {props.label}
-    </label>
-  );
-};
+            {props.label}
+        </label>
+    )
+}
 
 CheckBox.propTypes = {
-  label: PropTypes.string.isRequired,
-  checked: PropTypes.bool,
-};
+    label: PropTypes.string.isRequired,
+    checked: PropTypes.bool,
+}
 
-export default CheckBox;
+export default CheckBox

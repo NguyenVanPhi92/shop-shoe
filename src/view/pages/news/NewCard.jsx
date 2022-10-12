@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 // import PropTypes from 'prop-types';
 
-const NewsCard = (props) => {
-    const isNews = true;
+const NewsCard = props => {
+    const isNews = true
     return (
         <div className="news-card">
             <img
@@ -15,12 +15,12 @@ const NewsCard = (props) => {
                 <h4>Văn hóa streetwear mở ra kỷ nguyên mới cho ngành thời trang?</h4>
             </div>
             <div className="new-card__content">
-                Streetwear không còn là nền văn hoá, nó đã trở thành kỷ nguyên mới dành cho thế hệ
-                yêu thời trang của thế kỷ 21. S...
+                Streetwear không còn là nền văn hoá, nó đã trở thành kỷ nguyên mới dành cho thế hệ yêu thời trang của
+                thế kỷ 21. S...
             </div>
         </div>
-    );
-};
+    )
+}
 
 // NewsCard.propTypes = {
 //   img: PropTypes.string.isRequired,
@@ -28,4 +28,4 @@ const NewsCard = (props) => {
 //   content: PropTypes.number.isRequired,
 // };
 
-export default NewsCard;
+export default NewsCard

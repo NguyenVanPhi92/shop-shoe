@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { logo } from 'shared/assets/images';
-import Button from 'shared/components/Form/Button/Button';
-import Grid from 'shared/grid/components/Grid';
-import { runFireworks } from 'utils/confettiFireworks';
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { logo } from 'shared/assets/images'
+import Button from 'shared/components/Form/Button/Button'
+import Grid from 'shared/grid/components/Grid'
+import { runFireworks } from 'utils/confettiFireworks'
 
 const Success = () => {
-    const [timeOut, setTimeOut] = useState(0);
-    const navigate = useNavigate();
+    const [timeOut, setTimeOut] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
-        runFireworks();
+        runFireworks()
 
         const timer = setInterval(() => {
-            setTimeOut((prev) => prev + 1);
-        }, 1000);
+            setTimeOut(prev => prev + 1)
+        }, 1000)
 
-        if (timeOut === 10) return navigate('/');
+        if (timeOut === 10) navigate('/')
         return () => {
-            clearInterval(timer);
-        };
-    }, [navigate, timeOut]);
+            clearInterval(timer)
+        }
+    }, [navigate, timeOut])
 
     return (
         <div className="wrapper">
@@ -37,8 +37,8 @@ const Success = () => {
                         <div className="message__content">
                             <p className="message__content__title">Cảm ơn bạn đã đặt hàng</p>
                             <p className="message__content__sub-title">
-                                Một email xác nhận đã được gửi tới patrickdev330@gmail.com. Xin vui
-                                lòng kiểm tra email của bạn
+                                Một email xác nhận đã được gửi tới patrickdev330@gmail.com. Xin vui lòng kiểm tra email
+                                của bạn
                             </p>
                         </div>
                     </div>
@@ -108,7 +108,7 @@ const Success = () => {
                 </Button>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Success;
+export default Success

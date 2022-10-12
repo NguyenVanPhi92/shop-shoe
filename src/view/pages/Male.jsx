@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Male = () => {
-  return <div>Male</div>;
-};
+    return <div>Male</div>
+}
 
-export default Male;
+export default Male

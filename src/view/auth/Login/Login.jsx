@@ -1,12 +1,15 @@
-import { Link } from 'react-router-dom';
-import Button from 'shared/components/Form/Button/Button';
+import { Link } from 'react-router-dom'
+import { logo } from 'shared/assets/images'
+import Button from 'shared/components/Form/Button/Button'
 
 const Login = () => {
     return (
         <div className="wrapper">
             <div class="login">
                 <div className="login__title">
-                    <div className="logo">your logo here</div>
+                    <div className="logo">
+                        <img src={logo} alt="" width={150} />
+                    </div>
                     <h2>Welcome Back!</h2>
                     <p>Amet minim mallit non desert</p>
                 </div>
@@ -25,7 +28,9 @@ const Login = () => {
                     <p className="forgot__password">
                         <Link to="register">Forgot Password</Link>
                     </p>
-                    <Button size="block">Sign In</Button>
+                    <Button size="block">
+                        <Link to="/">Sign In</Link>
+                    </Button>
 
                     <div class="divider">
                         <div class="or or--x">Or sign in with</div>
@@ -49,7 +54,7 @@ const Login = () => {
       </div> */}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

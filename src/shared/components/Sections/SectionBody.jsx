@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const SectionBody = (props) => {
-    return <div className="section__body">{props.children}</div>;
-};
+const SectionBody = props => {
+    return <div className="section__body">{props.children}</div>
+}
 
-SectionBody.propTypes = {};
+SectionBody.propTypes = {}
 
-export default SectionBody;
+export default SectionBody

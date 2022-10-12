@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { set } from 'redux/product-modal/productModalSlice';
-import Button from 'shared/components/Form/Button/Button';
-import { formatPrice } from 'utils/formatPrice';
+import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { set } from 'redux/product-modal/productModalSlice'
+import Button from 'shared/components/Form/Button/Button'
+import { formatPrice } from 'utils/formatPrice'
 
-const ProductCard = (props) => {
-    const { slug, img01, productHot, name, productNew, sale, price, percentDiscount } = props;
-    const dispatch = useDispatch();
+const ProductCard = props => {
+    const { slug, img01, productHot, name, productNew, sale, price, percentDiscount } = props
+    const dispatch = useDispatch()
 
     return (
         <div className="product-card">
@@ -34,18 +34,13 @@ const ProductCard = (props) => {
             </Link>
 
             <div className="product-card__btn">
-                <Button
-                    size="sm"
-                    icon="bx bx-cart"
-                    animate={true}
-                    onClick={() => dispatch(set(slug))}
-                >
+                <Button size="sm" icon="bx bx-cart" animate={true} onClick={() => dispatch(set(slug))}>
                     Chọn mua
                 </Button>
             </div>
         </div>
-    );
-};
+    )
+}
 
 ProductCard.propTypes = {
     img01: PropTypes.string.isRequired,
@@ -56,6 +51,6 @@ ProductCard.propTypes = {
     productNew: PropTypes.bool.isRequired,
     percentDiscount: PropTypes.string.isRequired,
     sale: PropTypes.bool.isRequired,
-};
+}
 
-export default ProductCard;
+export default ProductCard

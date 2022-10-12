@@ -1,14 +1,14 @@
-import productData from 'shared/assets/fake-data/products';
-import { banner_home, sale } from 'shared/assets/images';
-import Helmet from 'shared/components/Helmet';
-import NewsCard from 'view/pages/news/NewCard';
-import Section from 'shared/components/Sections/Section';
-import SectionBody from 'shared/components/Sections/SectionBody';
-import SectionTitle from 'shared/components/Sections/SectionTitle';
-import Slider from 'shared/components/Slider';
-import Grid from 'shared/grid/components/Grid';
-import GridAreas from 'shared/grid/components/GridAreas';
-import ProductCard from './product/components/ProductCard';
+import productData from 'shared/assets/fake-data/products'
+import { banner_home, sale } from 'shared/assets/images'
+import Helmet from 'shared/components/Helmet'
+import NewsCard from 'view/pages/news/NewCard'
+import Section from 'shared/components/Sections/Section'
+import SectionBody from 'shared/components/Sections/SectionBody'
+import SectionTitle from 'shared/components/Sections/SectionTitle'
+import Slider from 'shared/components/Slider'
+import Grid from 'shared/grid/components/Grid'
+import GridAreas from 'shared/grid/components/GridAreas'
+import ProductCard from './product/components/ProductCard'
 
 const Home = () => {
     return (
@@ -21,24 +21,14 @@ const Home = () => {
 
             {/*SLIDER SẢN PHẨM HOT NHẤT  */}
             <Section>
-                <SectionTitle
-                    btnContent="Xem tất cả"
-                    slug="/catalog"
-                    menu
-                    title="SẢN PHẨM HOT 2023"
-                />
+                <SectionTitle btnContent="Xem tất cả" slug="/catalog" menu title="SẢN PHẨM HOT 2023" />
                 <Slider />
             </Section>
             {/*END*/}
 
             {/*SẢN PHẨM GIẢM GIÁ */}
             <Section>
-                <SectionTitle
-                    menu
-                    title="TOP SẢN PHẨM BÁN CHẠY"
-                    btnContent="Xem tất cả"
-                    slug="/catalog"
-                />
+                <SectionTitle menu title="TOP SẢN PHẨM BÁN CHẠY" btnContent="Xem tất cả" slug="/catalog" />
                 <SectionBody>
                     <GridAreas>
                         <div className="grid-areas__banner">
@@ -134,7 +124,7 @@ const Home = () => {
             </Section>
             {/*END */}
         </Helmet>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home
