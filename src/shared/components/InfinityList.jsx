@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import Grid from 'shared/grid/components/Grid'
 import ProductCard from 'view/pages/product/components/ProductCard'
 
+// render list product
 const InfinityList = props => {
     const listRef = useRef(null)
     const perLoad = 6 // items each load
@@ -51,7 +52,7 @@ const InfinityList = props => {
 
     return (
         <div ref={listRef}>
-            <Grid col={3} mdCol={2} smCol={1} gap={20}>
+            <Grid col={4} mdCol={3} smCol={1} gap={20}>
                 {data.map((item, index) => (
                     <ProductCard
                         key={index}

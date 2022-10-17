@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import React from 'react'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -24,7 +25,7 @@ const ProductView = props => {
             size: [],
         }
     }
-    const [previewImg, setPreviewImg] = useState(product.image01)
+    const [previewImg, setPreviewImg] = useState(undefined)
     const [descriptionExpand, setDescriptionExpand] = useState(false)
     const [color, setColor] = useState(undefined)
     const [size, setSize] = useState(undefined)
@@ -94,19 +95,24 @@ const ProductView = props => {
                 </div>
 
                 <div className="product__images__list">
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image01)}>
+                    <div
+                        className={
+                            product.image01 === previewImg
+                                ? 'product__images__list__item choose'
+                                : 'product__images__list__item'
+                        }
+                        onClick={() => setPreviewImg(product.image01)}
+                    >
                         <img src={product.image01} alt="" />
                     </div>
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
-                        <img src={product.image02} alt="" />
-                    </div>
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
-                        <img src={product.image02} alt="" />
-                    </div>
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
-                        <img src={product.image02} alt="" />
-                    </div>
-                    <div className="product__images__list__item" onClick={() => setPreviewImg(product.image02)}>
+                    <div
+                        className={
+                            product.image02 === previewImg
+                                ? 'product__images__list__item choose'
+                                : 'product__images__list__item'
+                        }
+                        onClick={() => setPreviewImg(product.image02)}
+                    >
                         <img src={product.image02} alt="" />
                     </div>
                 </div>

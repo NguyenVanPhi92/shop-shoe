@@ -37,6 +37,10 @@
                 border: 1px solid $font-color;
                 padding: 3px;
             }
+
+            .choose {
+                border: 3px solid $font-color;
+            }
         }
 
         &__main {
@@ -135,7 +139,7 @@
                     height: 50px;
                     border-radius: 50%;
 
-                    border: 2px solid rgb(216, 216, 216);
+                    border: 1px solid rgb(216, 216, 216);
                     cursor: pointer;
                     margin-right: 1rem;
 
@@ -145,6 +149,7 @@
                     }
 
                     &.active {
+                        border: 3px solid $main-bg;
                         border-color: $main-color;
                     }
 

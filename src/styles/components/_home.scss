@@ -4,8 +4,10 @@
             .product-card {
                 border: 1px solid #eee;
                 border-radius: 3px;
+                display: flex;
 
                 &__image {
+                    pointer-events: none; // loại bỏ thuộc tính rê chuột
                     img {
                         padding: 5px;
                         height: 100%;
@@ -34,10 +36,6 @@
                     }
                 }
 
-                &__btn {
-                    display: none;
-                }
-
                 a {
                     display: flex;
                     flex-direction: row;
@@ -55,7 +53,7 @@
                 }
 
                 &__price {
-                    margin-top: 15px;
+                    margin-top: 10px;
                     font-size: 1.2rem;
 
                     span {

@@ -1,12 +1,11 @@
 .product-card {
-    text-align: center;
+    text-align: left;
 
     &__image {
         position: relative;
-        // hiệu ứng ảnh
 
         .promotion {
-            width: 50px;
+            width: 40px;
             position: absolute;
             top: 2px;
             left: 2px;
@@ -24,6 +23,73 @@
             }
         }
 
+        .icon__action {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &-right,
+            &-left {
+                position: absolute;
+
+                .icon__add {
+                    font-size: 35px;
+                    opacity: 0.4;
+                }
+
+                .icon__heart,
+                .icon__detail {
+                    font-size: 30px;
+                    opacity: 0.4;
+                }
+            }
+
+            &-right {
+                top: 16px;
+                right: 6px;
+
+                @include flex(center, center);
+                flex-direction: column;
+                gap: 6px;
+
+                .active {
+                    color: rgb(255, 0, 85);
+                }
+            }
+
+            &-left {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
+                background-color: rgb(233, 233, 233);
+
+                &:hover {
+                    background-color: rgb(234, 234, 234);
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                display: block;
+                background-color: hsla(0, 0%, 100%, 0.3);
+
+                .icon__heart,
+                .icon__detail,
+                .icon__add {
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:hover .icon__action {
+            display: block;
+        }
         .sale-percent,
         .product-new,
         .product-hot {
@@ -59,6 +125,11 @@
         font-weight: normal;
     }
 
+    &__rating {
+        @include flex(center, flex-start);
+        gap: 10px;
+    }
+
     &__price {
         color: $font-color;
         font-size: 1.5rem;
@@ -71,14 +142,6 @@
             font-weight: 300;
 
             font-size: 1.2rem;
-        }
-    }
-
-    &__btn {
-        margin-bottom: 15px;
-
-        @include tablet {
-            display: none;
         }
     }
 }
