@@ -181,6 +181,7 @@ const Catalog = () => {
                     </Button>
                 </div>
 
+                {/* List các sản phầm sau khi filter */}
                 <div className="catalog__content">
                     <InfinityList data={products} />
                 </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Grid from '../../shared/grid/components/Grid'
 import logo from 'shared/assets/images/logo.png'
 import InputField from './Form/Input/InputField'
 import Section from './Sections/Section'
 import Button from './Form/Button/Button'
+import Grid from 'shared/grid/components/Grid'
 
 const footerAboutLinks = [
     {
